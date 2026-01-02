@@ -1,6 +1,6 @@
 function calcular(){
 let tabla = document.getElementById("tablaCubos");
-let fila = tabla.insertRow();
+let fila = tabla.insertRow(); 
 fila.insertCell().textContent ="3X3";
 fila.insertCell().textContent ="26";
 fila.insertCell().textContent ="3";
@@ -44,6 +44,7 @@ fila.insertCell().textContent ="NO SE";
 }
 
   actualizar();
+
 
 
 
