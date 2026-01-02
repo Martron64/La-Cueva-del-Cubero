@@ -30,7 +30,7 @@ function actualizar(){
     CUBOS=data;
   });
   console.log("1");
-console.log(CUBOS[0]);
+console.log(CUBOS);
   console.log("2");
 let tabla = document.getElementById("tablaCubos");
 let fila = tabla.insertRow();
@@ -50,6 +50,7 @@ fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="NO SE";
 }
+
 
 
 
