@@ -40,7 +40,8 @@ fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="NO SE";
 }
 
-  actualizar();
+  //actualizar();
+
 
 
 
