@@ -23,7 +23,7 @@ fila.insertCell().textContent ="NO SE";
 }
 
 function actualizar(){
-  let CUBOS;
+  let CUBOS=[];
   fetch("DataCubos.json")
   .then(response => response.json())
   .then(data => {
@@ -50,6 +50,7 @@ fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="NO SE";
 }
+
 
 
 
