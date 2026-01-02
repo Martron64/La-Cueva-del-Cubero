@@ -1,6 +1,7 @@
 function calcular(){
 let tabla = document.getElementById("tablaCubos");
 let fila = tabla.insertRow();
+consol.log("Que mira vo")
 fila.insertCell().textContent ="3X3";
 fila.insertCell().textContent ="26";
 fila.insertCell().textContent ="3";
@@ -17,5 +18,6 @@ fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="NO SE";
 }
+
 
 
