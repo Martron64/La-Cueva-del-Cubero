@@ -1,4 +1,4 @@
-function calcular(){/*
+function calcular(){
 let tabla = document.getElementById("tablaCubos");
 let fila = tabla.insertRow();
 fila.insertCell().textContent ="3X3";
@@ -15,8 +15,9 @@ fila.insertCell().textContent ="21";
 fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="0";
-fila.insertCell().textContent ="NO SE";*/
+fila.insertCell().textContent ="NO SE";
 }
+
 
 
 
