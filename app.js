@@ -23,12 +23,14 @@ fila.insertCell().textContent ="NO SE";
 }
 
 function actualizar(){
+  let CUBOS;
   fetch("DataCubos.json")
   .then(response => response.json())
   .then(data => {
+    CUBOS=data;
   });
   console.log("1");
-console.log(data);
+console.log(CUBOS);
   console.log("2");
 let tabla = document.getElementById("tablaCubos");
 let fila = tabla.insertRow();
@@ -48,6 +50,7 @@ fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="0";
 fila.insertCell().textContent ="NO SE";
 }
+
 
 
 
