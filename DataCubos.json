@@ -1,7 +1,8 @@
 [
   {"cubo":"3x3","cantPiezas":"26","tipoPiezas":3,"cantGiros":"6","tipoGiros":"1","pasosMin":"7",
-   "cantAlg":"6","difProAlg":"12","DifAlgTot":"21","DifBlock":"0","DifDeform":"0","DifParid":"0",},
+   "cantAlg":"6","difPromAlg":"12","difAlgTot":"21","difBlock":"0","difDeform":"0","difParid":"0"},
   
   {"cubo":"4x4","cantPiezas":"56","tipoPiezas":3,"cantGiros":"6","tipoGiros":"1","pasosMin":"9",
-   "cantAlg":"8","difProAlg":"12","DifAlgTot":"21","DifBlock":"0","DifDeform":"0","DifParid":"2",}
+   "cantAlg":"8","difPromAlg":"12","difAlgTot":"21","difBlock":"0","difDeform":"0","difParid":"2"}
 ]
+
