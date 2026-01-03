@@ -11,7 +11,8 @@ function actualizar(){
   
 }
 function cargarTabla(data){
-  console.log("1");
+  let text =document.getElementById("buscador").value.ToLowerCase();
+  console.log(text);
   console.log(data);
   console.log("2");
 let tabla = document.getElementById("tablaCubos");
@@ -32,6 +33,7 @@ for(let x=0;x<data.length;x++){
   fila.insertCell().textContent =data[x].difAlgTot+data[x].difBlock+data[x].difDeform+data[x].difParid;
 }
 }
+
 
 
 
