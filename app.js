@@ -39,7 +39,38 @@ for(let x=0;x<data.length;x++){
   fila.insertCell().textContent =data[x].difAlgTot+data[x].difBlock+data[x].difDeform+data[x].difParid;
 }
 }
-
+function ordenar(data){
+  for(let x=0;x<data.length;x++){
+    let aux1;
+    let min;
+    let TIPO=document.getElementById("Tipo").value;
+    if (TIPO=="DifTot"){
+      aux1=data[x];
+    }
+    else if(DifAlg=="DifTot")
+  }
+}
+function asignar(objeto,TIPO){
+  let aux;
+  if (TIPO=="DifTot"){
+      aux=data[x].difAlgTot+data[x].difBlock+data[x].difDeform+data[x].difParid;
+    }
+    else if(DifAlg=="DifAlg"){
+      aux=data[x].difAlgTot;
+    }
+    else if(DifAlg=="DifBlock"){
+      aux=2.718281828**data[x].difBlock;
+    }
+    else if(DifAlg=="DifDeform"){
+      aux=2.718281828**data[x].difDeform;
+    }
+    else if(DifAlg=="DifParid"){
+      aux=data[x].difParid;
+    }
+    else if(DifAlg=="CantPiezas"){
+      aux=data[x].cantPiezas;
+    }
+}
 
 
 
