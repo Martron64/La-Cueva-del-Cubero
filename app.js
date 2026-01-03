@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   actualizar();
 });
 document.getElementById("buscador").addEventListener("input", actualizar);
-document.getElementById("orden").addEventListener("change", actualizar);
+document.getElementById("Tipo").addEventListener("change", actualizar);
+document.getElementById("Orden").addEventListener("change", actualizar);
 function actualizar(){
   fetch("DataCubos.json")
   .then(response => response.json())
@@ -14,9 +15,9 @@ function actualizar(){
 function cargarTabla(data){
   let text =document.getElementById("buscador").value;
   console.log(text);
-  let ch =document.getElementById("orden").value;
+  let ch =document.getElementById("Tipo").value;
   console.log(ch);
-  let A_D =document.getElementById("AscDes").value;
+  let A_D =document.getElementById("Orden").value;
   console.log(A_D);
 let tabla = document.getElementById("tablaCubos");
   while(tabla.rows.length>1)
@@ -38,6 +39,7 @@ for(let x=0;x<data.length;x++){
   fila.insertCell().textContent =data[x].difAlgTot+data[x].difBlock+data[x].difDeform+data[x].difParid;
 }
 }
+
 
 
 
