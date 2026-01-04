@@ -104,7 +104,7 @@ function filtrar(data){
   let SubStr=document.getElementById("buscador").value;
   if(0<SubStr.length)
     for(let x=0;x<data.length;x++){
-      if(!subcadena(data[x].cubo,SubStr){
+      if(!subcadena(data[x].cubo,SubStr)){
        data.splice(x,1);
         x--;
       }
@@ -131,6 +131,7 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
+
 
 
 
