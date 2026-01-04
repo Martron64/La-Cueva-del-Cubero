@@ -23,8 +23,8 @@ function cargarTabla(data){
 let tabla = document.getElementById("tablaCubos");
   while(tabla.rows.length>1)
     tabla.deleteRow(1);
-  ordenar(data);
   filtrar(data);
+  ordenar(data);
 for(let x=0;x<data.length;x++){  
   let fila = tabla.insertRow();
   fila.insertCell().textContent =data[x].cubo;
@@ -103,11 +103,10 @@ function comparar(A,B,A_D){
 function filtrar(data){
   let SubStr=document.getElementById("buscador").value;
   for(let x=0;x<data.length;x++){
-    console.log("-----------------------");
-    console.log(data[x].cubo);
-    console.log(SubStr);
-    console.log(subcadena(data[x].cubo,SubStr));
-    console.log("-----------------------");
+    if(!subcadena(data[x].cubo,SubStr){
+     data.splice(x,1);
+      x--;
+    }
   }
 }
 function subcadena(Str,SubStr){
@@ -130,6 +129,7 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
+
 
 
 
