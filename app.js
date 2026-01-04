@@ -124,6 +124,7 @@ function cargarAlgoritmos(data,algoritmos){
   });
 }
 function ImprimirTabla(data){
+  let tabla = document.getElementById("tablaCubos");
   for(let x=0;x<data.length;x++){  
   let fila = tabla.insertRow();
   fila.insertCell().textContent =data[x].cubo;
@@ -141,4 +142,5 @@ function ImprimirTabla(data){
   fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
 }
 }
+
 
