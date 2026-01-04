@@ -25,22 +25,7 @@ let tabla = document.getElementById("tablaCubos");
     tabla.deleteRow(1);
   filtrar(data);
   ordenar(data);
-for(let x=0;x<data.length;x++){  
-  let fila = tabla.insertRow();
-  fila.insertCell().textContent =data[x].cubo;
-  fila.insertCell().textContent =data[x].cantPiezas;
-  fila.insertCell().textContent =data[x].tipoPiezas;
-  fila.insertCell().textContent =data[x].cantGiros;
-  fila.insertCell().textContent =data[x].tipoGiros;
-  fila.insertCell().textContent =data[x].pasosMin;
-  fila.insertCell().textContent =data[x].cantAlg;
-  fila.insertCell().textContent =data[x].difPromAlg;
-  fila.insertCell().textContent =data[x].difAlgTot;
-  fila.insertCell().textContent =((2.718281828**data[x].difBlock)-1);
-  fila.insertCell().textContent =((2.718281828**data[x].difDeform)-1);
-  fila.insertCell().textContent =data[x].difParid;
-  fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
-}
+  imprimirTabla(data);
 }
 function ordenar(data){
   let TIPO=document.getElementById("Tipo").value;
@@ -131,45 +116,28 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function cargarAlgoritmos(data,algoritmos){
+  fetch("DataCubos.json")
+  .then(response => response.json())
+  .then(data => {
+    cargarTabla(data);
+  });
+}
+function ImprimirTabla(data){
+  for(let x=0;x<data.length;x++){  
+  let fila = tabla.insertRow();
+  fila.insertCell().textContent =data[x].cubo;
+  fila.insertCell().textContent =data[x].cantPiezas;
+  fila.insertCell().textContent =data[x].tipoPiezas;
+  fila.insertCell().textContent =data[x].cantGiros;
+  fila.insertCell().textContent =data[x].tipoGiros;
+  fila.insertCell().textContent =data[x].pasosMin;
+  fila.insertCell().textContent =data[x].cantAlg;
+  fila.insertCell().textContent =data[x].difPromAlg;
+  fila.insertCell().textContent =data[x].difAlgTot;
+  fila.insertCell().textContent =((2.718281828**data[x].difBlock)-1);
+  fila.insertCell().textContent =((2.718281828**data[x].difDeform)-1);
+  fila.insertCell().textContent =data[x].difParid;
+  fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
+}
+}
