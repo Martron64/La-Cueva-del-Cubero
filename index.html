@@ -70,11 +70,52 @@
     mismo a "deshacer" un algoritmo), y dif_alg_esp es la suma de la dificultad de los algoritmos espejos 
 </h4>
 <h4> 
-    Dificultad por Bloqueo: Algunos cubos de rubik pueden llegar a presentar bloqueos, que pueden ser 1 de 4 casos.
+    Dificultad por Bloqueo: Algunos cubos de rubik pueden llegar a presentar bloqueos, que pueden ser 1 de 4 niveles.
 </h4> 
 <h5> 
-    Cantidad de piezas: La cantidad de piezas del cubo de rubik
+    nivel 0: no bloqueo
 </h5>
+<h5> 
+    nivel 1: hay que "alinear" el cubo para girar (ej: pentacle, square-one, polarir)
+</h5>
+<h5> 
+    nivel 2: Alguna piezas se bloquean en ciertos casos (ej:Puppet V2)
+</h5>
+<h5> 
+    nivel 3: hay piezas que solo se pueden mover a traves de algoritmos (ej: Puppet V1)
+</h5>
+<h4> 
+    La dificultad se calcula con e^2-1, con n siendo el nivel.
+</h4> 
+<h4> 
+    Dificultad por Deformacion: Hay cubos de rubik que presentan deformaciones (o que no pero presentan siertos patrones 
+    que aumentan su dificultad, como el cubo crucigrama), donde al igual que el anterior, hay de 4 niveles.
+</h4> 
+<h5> 
+    nivel 0: no deformacion
+</h5>
+<h5> 
+    nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 3x3)
+</h5>
+<h5> 
+    nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada pieza, y su tipo (ej: axis 3x3)
+</h5>
+<h5> 
+    nivel 3: ya se confunden las piezas, no el tipo, pero es dificil diferenciar una esquina de otra (ej: ghost 3x3, crucigrama 3x3) 
+</h5>
+<h4> 
+    La dificultad se calcula con e^2-1, con n siendo el nivel.
+</h4>
+<h4> 
+    Dificultad por Paridad: Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una variacion de 
+    otro cubo, como el 4x4 variacion del 3x3, por ejemplo, al llegar a la etapa de la cruz amarilla, en el 3x3 es impocible que solo esten
+    dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera de los dos casos 
+    "impocibles. El calculo de la dificultad es "alg_parid/cant_parid", donde alg_parid son los algoritmos que resuelven la paridad, y 
+    cant_parid la cantidad de paridades
+</h4> 
+<h4> 
+    Dificultad total: Dada por "Dificultad_algoritmica_total + dificultad_por_cloqueo + dificultad_por_deformacion + dificultad_por_paridad"
+</h4> 
 <h2>
     tabla de dificultad
 </h2>
@@ -123,5 +164,6 @@ Buscar cubo:
 <script src="./app.js" defer></script>
 </body>    
 </html>
+
 
 
