@@ -25,7 +25,7 @@ let tabla = document.getElementById("tablaCubos");
     tabla.deleteRow(1);
   filtrar(data);
   ordenar(data);
-  imprimirTabla(data);
+  ImprimirTabla(data);
 }
 function ordenar(data){
   let TIPO=document.getElementById("Tipo").value;
@@ -141,3 +141,4 @@ function ImprimirTabla(data){
   fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
 }
 }
+
