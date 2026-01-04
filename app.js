@@ -94,15 +94,16 @@ function asignar(objeto,TIPO){
 }
 function comparar(A,B,A_D){
   if(A_D=="Asc")
-    return A<B;
+    return B<A;
   else if(A_D=="Des")
-    return B<A
+    return A<B;
 }
 function subcadena(Str,SubStr){
   if(SubStr.length>Str.length)
     return false;
   
 }
+
 
 
 
