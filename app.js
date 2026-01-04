@@ -102,7 +102,7 @@ function comparar(A,B,A_D){
 }
 function filtrar(data){
   let SubStr=document.getElementById("buscador").value;
-  if(SubStr!=""){
+  if(SubStr.length>0){
     for(let x=0;x<data.length;x++){
       if(!subcadena(data[x].cubo,SubStr){
        data.splice(x,1);
@@ -131,6 +131,7 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
+
 
 
 
