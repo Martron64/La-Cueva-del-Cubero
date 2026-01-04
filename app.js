@@ -23,6 +23,7 @@ let tabla = document.getElementById("tablaCubos");
   while(tabla.rows.length>1)
     tabla.deleteRow(1);
   ordenar(data);
+  filtrar(data);
 for(let x=0;x<data.length;x++){  
   let fila = tabla.insertRow();
   fila.insertCell().textContent =data[x].cubo;
@@ -98,12 +99,32 @@ function comparar(A,B,A_D){
   else if(A_D=="Des")
     return A<B;
 }
-function subcadena(Str,SubStr){
-  if(SubStr.length>Str.length)
-    return false;
-  
+function filtrar(data){
+  let SubStr=document.getElementById("buscador").value;
+  for(let x=0;x<data.length;x++){
+    console.log(data[x].cubo);
+    console.log(subcadena(data[x].cubo,SubStr));
+    console.log();
+  }
 }
-
+function subcadena(Str,SubStr){
+  if(SubStr.length>Str.length||SubStr.length<=0)
+    return false;
+  else if(SubStr.length==Str.length)
+    return SubStr==Str;
+  for(let x=0;x<Str.lenght-SubStr.length+1;x++){
+    let seguir=true;
+    for(let y=0;y<SubStr.length&&seguir;y++){
+      let char1=Str[x+y];
+      let char2=SubStr[x+y];
+      if(char1!=char2)
+        seguir=false;
+    }
+    if(seguir)
+      return true;
+  }
+  return false;
+}
 
 
 
