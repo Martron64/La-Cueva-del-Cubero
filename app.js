@@ -98,6 +98,11 @@ function comparar(A,B,A_D){
   else if(A_D=="Des")
     return B<A
 }
+function subcadena(Str,SubStr){
+  if(SubStr.length>Str.length)
+    return false;
+  
+}
 
 
 
