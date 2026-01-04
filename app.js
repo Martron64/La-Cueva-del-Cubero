@@ -111,8 +111,8 @@ function filtrar(data){
   }
 }
 function subcadena(Str,SubStr){
-  aux1=Str.ToLowerCase();
-  aux2=SubStr.ToLowerCase();
+  aux1=Str.toLowerCase();
+  aux2=SubStr.toLowerCase();
   if(SubStr.length>Str.length||SubStr.length<=0)
     return false;
   else if(SubStr.length==Str.length)
@@ -130,6 +130,7 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
+
 
 
 
