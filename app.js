@@ -19,6 +19,7 @@ function cargarTabla(data){
   console.log(ch);
   let A_D =document.getElementById("Orden").value;
   console.log(A_D);
+  console.log("-----------------------");
 let tabla = document.getElementById("tablaCubos");
   while(tabla.rows.length>1)
     tabla.deleteRow(1);
@@ -104,7 +105,7 @@ function filtrar(data){
   for(let x=0;x<data.length;x++){
     console.log(data[x].cubo);
     console.log(subcadena(data[x].cubo,SubStr));
-    console.log();
+  console.log("-----------------------");
   }
 }
 function subcadena(Str,SubStr){
@@ -125,6 +126,7 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
+
 
 
 
