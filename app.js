@@ -111,15 +111,17 @@ function filtrar(data){
   }
 }
 function subcadena(Str,SubStr){
+  aux1=Str.ToLowerCase();
+  aux2=SubStr.ToLowerCase();
   if(SubStr.length>Str.length||SubStr.length<=0)
     return false;
   else if(SubStr.length==Str.length)
-    return SubStr==Str;
-  for(let x=0;x<Str.lenght-SubStr.length+1;x++){
+    return aux1==aux2;
+  for(let x=0;x<Str.length-SubStr.length+1;x++){
     let seguir=true;
     for(let y=0;y<SubStr.length&&seguir;y++){
-      let char1=Str[x+y];
-      let char2=SubStr[x+y];
+      let char1=aux1[x+y];
+      let char2=aux2[y];
       if(char1!=char2)
         seguir=false;
     }
@@ -128,6 +130,7 @@ function subcadena(Str,SubStr){
   }
   return false;
 }
+
 
 
 
