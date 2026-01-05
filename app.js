@@ -117,6 +117,7 @@ function subcadena(Str,SubStr){
   return false;
 }
 function cargarAlgoritmos(data,algoritmos){
+  let nombre="algoritmos/"+data[algoritmos.length].cubo+".json";
   fetch("DataCubos.json")
   .then(response => response.json())
   .then(data => {
@@ -142,5 +143,6 @@ function ImprimirTabla(data){
   fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
 }
 }
+
 
 
