@@ -118,6 +118,7 @@ function subcadena(Str,SubStr){
   return false;
 }
 function cargarAlgoritmos(data,algoritmos){
+  console.log("dentro");
   fetch(data[algoritmos.length].direccion)
   .then(response => response.json())
   .then(elemento => {
@@ -147,6 +148,7 @@ function ImprimirTabla(data,algoritmos){
   fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
 }
 }
+
 
 
 
