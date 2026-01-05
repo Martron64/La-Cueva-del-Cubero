@@ -1,11 +1,14 @@
 [
   {"cubo":"3x3","cantPiezas":26,"tipoPiezas":3,"cantGiros":6,"tipoGiros":1,"pasosMin":7,
-   "cantAlg":6,"difPromAlg":12,"difAlgTot":21,"difBlock":0,"difDeform":0,"difParid":0},
+   "cantAlg":6,"difPromAlg":12,"difAlgTot":21,"difBlock":0,"difDeform":0,"difParid":0,
+   "direccion":"algoritmos/3x3.json"},
   
   {"cubo":"Mirror","cantPiezas":26,"tipoPiezas":3,"cantGiros":6,"tipoGiros":1,"pasosMin":7,
-   "cantAlg":6,"difPromAlg":12,"difAlgTot":21,"difBlock":0,"difDeform":1,"difParid":0},
+   "cantAlg":6,"difPromAlg":12,"difAlgTot":21,"difBlock":0,"difDeform":1,"difParid":0,
+   "direccion":"algoritmos/Mirror.json"},
   
   {"cubo":"4x4","cantPiezas":56,"tipoPiezas":3,"cantGiros":6,"tipoGiros":1,"pasosMin":9,
-   "cantAlg":8,"difPromAlg":12,"difAlgTot":21,"difBlock":0,"difDeform":0,"difParid":2}
+   "cantAlg":8,"difPromAlg":12,"difAlgTot":21,"difBlock":0,"difDeform":0,"difParid":2,
+   "direccion":"algoritmos/4x4.json"}
 ]
 
