@@ -118,12 +118,9 @@ function subcadena(Str,SubStr){
   return false;
 }
 function cargarAlgoritmos(data,algoritmos){
-  console.log("fuera");
-  console.log(data[algoritmos.length].direccion);
   fetch(data[algoritmos.length].direccion)
   .then(response => response.json())
   .then(elemento => {
-    console.log("dentro");
     algoritmos.push(elemento);
     if(algoritmos.length==data.length)
       ImprimirTabla(data,algoritmos)
@@ -206,6 +203,7 @@ function dificultadAlgoritmicaTotal(algoritmos){
   }
   return (contador_original**2+contador_espejo/2);
 }
+
 
 
 
