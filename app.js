@@ -201,8 +201,9 @@ function dificultadAlgoritmicaTotal(algoritmos){
     else
       contador_espejo=contador_espejo+calculoDifAlgoritmica(algoritmos[x]);
   }
-  return (contador_original**(4/3)+contador_espejo/2);
+  return (contador_original+contador_espejo/2);
 }
+
 
 
 
