@@ -25,7 +25,8 @@ let tabla = document.getElementById("tablaCubos");
     tabla.deleteRow(1);
   filtrar(data);
   ordenar(data);
-  ImprimirTabla(data);
+  let algoritmos=[];
+  cargarAlgoritmos(data,algoritmos);
 }
 function ordenar(data){
   let TIPO=document.getElementById("Tipo").value;
@@ -117,14 +118,17 @@ function subcadena(Str,SubStr){
   return false;
 }
 function cargarAlgoritmos(data,algoritmos){
-  let nombre="algoritmos/"+data[algoritmos.length].cubo+".json";
-  fetch("DataCubos.json")
+  fetch(data[algoritmos.length].direccion)
   .then(response => response.json())
-  .then(data => {
-    cargarTabla(data);
+  .then(elemento => {
+    algoritmos.push(elemento);
+    if(algoritmos.length==data.length)
+      ImprimirTabla(data,algoritmos)
+    else
+      cargarAlgoritmos(data,algoritmos);
   });
 }
-function ImprimirTabla(data){
+function ImprimirTabla(data,algoritmos){
   let tabla = document.getElementById("tablaCubos");
   for(let x=0;x<data.length;x++){  
   let fila = tabla.insertRow();
@@ -143,6 +147,7 @@ function ImprimirTabla(data){
   fila.insertCell().textContent =data[x].difAlgTot+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid;
 }
 }
+
 
 
 
