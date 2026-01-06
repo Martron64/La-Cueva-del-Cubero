@@ -70,7 +70,7 @@ function asignar(objeto,TIPO,algoritmos){
       aux=(e**objeto.difDeform)-1;
     }
     else if(TIPO=="DifParid"){
-      auxobjeto.difParid.alg/objeto.difParid.parid;
+      aux=objeto.difParid.alg/objeto.difParid.parid;
     }
     else if(TIPO=="CantPiezas"){
       aux=objeto.cantPiezas;
@@ -213,6 +213,7 @@ function dificultadAlgoritmicaTotal(algoritmos){
   }
   return (contador_original+contador_espejo/2);
 }
+
 
 
 
