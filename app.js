@@ -145,13 +145,13 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =prom;
     let algTot=fmt4(dificultadAlgoritmicaTotal(algoritmos[x]))+" gands";
     fila.insertCell().textContent =algTot;
-    let Block=fmt4(((e**data[x].difBlock)-1))+" gands";
+    let Block=fmt4(((e**data[x].difBlock)-1)*2)+" gands";
     fila.insertCell().textContent =Block;
-    let Deform=fmt4(((e**data[x].difDeform)-1))+" gands";
+    let Deform=fmt4(((e**data[x].difDeform)-1)*2)+" gands";
     fila.insertCell().textContent =Deform;
     let Parid=fmt4(data[x].difParid.alg/data[x].difParid.parid)+" gands";
     fila.insertCell().textContent =Parid;
-    let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)+((e**data[x].difDeform)-1)+
+    let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)*2+((e**data[x].difDeform)-1)*2+
                   data[x].difParid.alg/data[x].difParid.parid))+" gands";
     fila.insertCell().textContent =Tot;
   }
@@ -210,4 +210,5 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+
 
