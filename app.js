@@ -194,7 +194,7 @@ function calculoDifAlgoritmica(algoritmo){
     if(contador[x].contador<min)
       min=contador[x].contador;
   }
-  return (contador.length*max/min);
+  return (contador.length*max/min)*0.25;
 }
 
 function dificultadAlgoritmicaPromedio(algoritmos){
@@ -216,6 +216,7 @@ function dificultadAlgoritmicaTotal(algoritmos){
   }
   return (contador_original+contador_espejo/2);
 }
+
 
 
 
