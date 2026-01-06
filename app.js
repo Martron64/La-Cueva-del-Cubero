@@ -139,12 +139,18 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =data[x].tipoGiros;
     fila.insertCell().textContent =data[x].pasosMin;
     fila.insertCell().textContent =algoritmos[x].length;
-    fila.insertCell().textContent =dificultadAlgoritmicaPromedio(algoritmos[x]);
-    fila.insertCell().textContent =dificultadAlgoritmicaTotal(algoritmos[x]);
-    fila.insertCell().textContent =((2.718281828**data[x].difBlock)-1);
-    fila.insertCell().textContent =((2.718281828**data[x].difDeform)-1);
-    fila.insertCell().textContent =data[x].difParid.alg/data[x].difParid.parid;
-    fila.insertCell().textContent =dificultadAlgoritmicaTotal(algoritmos[x])+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid.alg/data[x].difParid.parid;
+    let prom=dificultadAlgoritmicaPromedio(algoritmos[x])+" gands";
+    fila.insertCell().textContent =prom;
+    let algTot=dificultadAlgoritmicaTotal(algoritmos[x])+" gands";
+    fila.insertCell().textContent =algTot;
+    let Block=((2.718281828**data[x].difBlock)-1)+" gands";
+    fila.insertCell().textContent =Block;
+    let Deform=((2.718281828**data[x].difDeform)-1)+" gands";
+    fila.insertCell().textContent =Deform;
+    let Parid=data[x].difParid.alg/data[x].difParid.parid+" gands";
+    fila.insertCell().textContent =Parid;
+    let Tot=(dificultadAlgoritmicaTotal(algoritmos[x])+((2.718281828**data[x].difBlock)-1)+((2.718281828**data[x].difDeform)-1)+data[x].difParid.alg/data[x].difParid.parid)+" gands";
+    fila.insertCell().textContent =Tot;
 }
 }
 function encontrar(contador,elemento){
@@ -198,6 +204,7 @@ function dificultadAlgoritmicaTotal(algoritmos){
   }
   return (contador_original+contador_espejo/2);
 }
+
 
 
 
