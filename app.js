@@ -1,4 +1,4 @@
-let e=2.7182;
+let e=2.718281828459;
 let TablaCubos=[];
 let ConjuntoAlgoritmos=[];
 document.addEventListener("DOMContentLoaded", () => {
@@ -135,6 +135,9 @@ function cargarAlgoritmos(data,algoritmos){
       cargarAlgoritmos(data,algoritmos);
   });
 }
+function fmt4(x) {
+  return Number(x.toFixed(4));
+}
 function ImprimirTabla(data,algoritmos){
   TablaCubos=data;
   ConjuntoAlgoritmos=algoritmos;
@@ -148,17 +151,17 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =data[x].tipoGiros;
     fila.insertCell().textContent =data[x].pasosMin;
     fila.insertCell().textContent =algoritmos[x].length;
-    let prom=dificultadAlgoritmicaPromedio(algoritmos[x])+" gands";
+    let prom=fmt4(dificultadAlgoritmicaPromedio(algoritmos[x]))+" gands";
     fila.insertCell().textContent =prom;
-    let algTot=dificultadAlgoritmicaTotal(algoritmos[x])+" gands";
+    let algTot=fmt4(dificultadAlgoritmicaTotal(algoritmos[x]))+" gands";
     fila.insertCell().textContent =algTot;
-    let Block=((e**data[x].difBlock)-1)+" gands";
+    let Block=fmt4(((e**data[x].difBlock)-1))+" gands";
     fila.insertCell().textContent =Block;
-    let Deform=((e**data[x].difDeform)-1)+" gands";
+    let Deform=fmt4(((e**data[x].difDeform)-1))+" gands";
     fila.insertCell().textContent =Deform;
-    let Parid=data[x].difParid.alg/data[x].difParid.parid+" gands";
+    let Parid=fmt4(data[x].difParid.alg/data[x].difParid.parid)+" gands";
     fila.insertCell().textContent =Parid;
-    let Tot=(dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)+((e**data[x].difDeform)-1)+data[x].difParid.alg/data[x].difParid.parid)+" gands";
+    let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)+((e**data[x].difDeform)-1)+data[x].difParid.alg/data[x].difParid.parid))+" gands";
     fila.insertCell().textContent =Tot;
 }
 }
@@ -213,6 +216,8 @@ function dificultadAlgoritmicaTotal(algoritmos){
   }
   return (contador_original+contador_espejo/2);
 }
+
+
 
 
 
