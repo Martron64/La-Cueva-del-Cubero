@@ -56,11 +56,11 @@
 <h4> 
     Dificultad promedio de algoritmos: A partir de este punto se empieza a hablar sobre dificultad, aunque este apartado solo dice que 
     tan dificil son, en promedio, los algoritmos utilizador. Para el calculo de dificultad de un algoritmo se va a utilizar la formula
-    "(mov_h + mov_a).(mov_mayor/mov_menor)", donde mov_h, son la cantidad de caras que se mueven en sentido horario, mov_a la cantidad 
-    que se mueve en anti-horario, mov_mayor son la cantidad de veces que se mueve la cara con mas movimiento, y mov_menor, la cantidad 
-    de veces que se mueve la cara con menor movimiento (estos ultimos dos, no es indepentiende de si la cara se mueve en un sentido o 
-    en otro, sino que si se mueve mas veces en un sentido, y menos en otro, la cantidad en un sentido puede ser usara como el mayor, 
-    y el otro como el menor)
+    "(mov_h + mov_a).(mov_mayor/mov_menor).k", donde mov_h, son la cantidad de caras que se mueven en sentido horario, mov_a la cantidad 
+    que se mueve en anti-horario, mov_mayor son la cantidad de veces que se mueve la cara con mas movimiento, mov_menor, la cantidad 
+    de veces que se mueve la cara con menor movimiento, y k es un factor de ponderacion, para mantener coherencia en el calculo de 
+    dificultad (estos ultimos dos, no es indepentiende de si la cara se mueve en un sentido o en otro, sino que si se mueve mas veces en 
+    un sentido, y menos en otro, la cantidad en un sentido puede ser usara como el mayor, y el otro como el menor)
 </h4>
 <h4> 
     Dificultad Algoritmica total: Aca ya entran detalles como el que puede ser que cuesta mas saberte ciertos algoritmos, y 
@@ -108,13 +108,14 @@
 </h4>
 <h4> 
     Dificultad por Paridad: Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una variacion de 
-    otro cubo, como el 4x4 variacion del 3x3, por ejemplo, al llegar a la etapa de la cruz amarilla, en el 3x3 es impocible que solo esten
-    dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera de los dos casos 
-    "impocibles. El calculo de la dificultad es "alg_parid/cant_parid", donde alg_parid son los algoritmos que resuelven la paridad, y 
-    cant_parid la cantidad de paridades
+    otro cubo, como el 4x4 variacion del 3x3, por ejemplo, al llegar a la etapa de la cruz amarilla, en el 3x3 es imposible que solo 
+    esten dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera de los dos 
+    casos "impocibles. El calculo de la dificultad es "alg_parid/cant_parid", donde alg_parid son los algoritmos que resuelven la paridad
+    , y cant_parid la cantidad de paridades
 </h4> 
 <h4> 
-    Dificultad total: Dada por "Dificultad_algoritmica_total + dificultad_por_cloqueo + dificultad_por_deformacion + dificultad_por_paridad"
+    Dificultad total: Dada por "Dificultad_algoritmica_total + dificultad_por_cloqueo + dificultad_por_deformacion + 
+    dificultad_por_paridad"
 </h4> 
 <h2>
     tabla de dificultad
@@ -158,6 +159,7 @@ Buscar cubo:
     <th>dificultad por deformacion</th>
     <th>dificultad por paridad</th>
     <th>dificultad total del cubo</th>
+    <th>Ver cubo</th>
   </tr>
 </table> 
 <h1>.</h1>
@@ -167,6 +169,7 @@ Buscar cubo:
 <script src="./app.js" defer></script>
 </body>    
 </html>
+
 
 
 
