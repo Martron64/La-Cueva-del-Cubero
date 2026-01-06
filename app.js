@@ -16,19 +16,54 @@ function actualizar(){
   
 }
 function cargarTabla(data){
-  let text =document.getElementById("buscador").value;
-  console.log(text);
-  let ch =document.getElementById("Tipo").value;
-  console.log(ch);
-  let A_D =document.getElementById("Orden").value;
-  console.log(A_D);
-  console.log("-----------------------");
 let tabla = document.getElementById("tablaCubos");
   while(tabla.rows.length>1)
     tabla.deleteRow(1);
   filtrar(data);
   let algoritmos=[];
   cargarAlgoritmos(data,algoritmos);
+}
+function filtrar(data){
+  let SubStr=document.getElementById("buscador").value;
+  if(0<SubStr.length)
+    for(let x=0;x<data.length;x++){
+      if(!subcadena(data[x].cubo,SubStr)){
+       data.splice(x,1);
+        x--;
+      }
+    }
+  
+}
+function subcadena(Str,SubStr){
+  aux1=Str.toLowerCase();
+  aux2=SubStr.toLowerCase();
+  if(SubStr.length>Str.length||SubStr.length<=0)
+    return false;
+  else if(SubStr.length==Str.length)
+    return aux1==aux2;
+  for(let x=0;x<Str.length-SubStr.length+1;x++){
+    let seguir=true;
+    for(let y=0;y<SubStr.length&&seguir;y++){
+      let char1=aux1[x+y];
+      let char2=aux2[y];
+      if(char1!=char2)
+        seguir=false;
+    }
+    if(seguir)
+      return true;
+  }
+  return false;
+}
+function cargarAlgoritmos(data,algoritmos){
+  fetch(data[algoritmos.length].direccion)
+  .then(response => response.json())
+  .then(elemento => {
+    algoritmos.push(elemento);
+    if(algoritmos.length==data.length)
+      ordenar(data,algoritmos);
+    else
+      cargarAlgoritmos(data,algoritmos);
+  });
 }
 function ordenar(data,algoritmos){
   let TIPO=document.getElementById("Tipo").value;
@@ -93,50 +128,6 @@ function comparar(A,B,A_D){
   else if(A_D=="Des")
     return A<B;
 }
-function filtrar(data){
-  let SubStr=document.getElementById("buscador").value;
-  if(0<SubStr.length)
-    for(let x=0;x<data.length;x++){
-      if(!subcadena(data[x].cubo,SubStr)){
-       data.splice(x,1);
-        x--;
-      }
-    }
-  
-}
-function subcadena(Str,SubStr){
-  aux1=Str.toLowerCase();
-  aux2=SubStr.toLowerCase();
-  if(SubStr.length>Str.length||SubStr.length<=0)
-    return false;
-  else if(SubStr.length==Str.length)
-    return aux1==aux2;
-  for(let x=0;x<Str.length-SubStr.length+1;x++){
-    let seguir=true;
-    for(let y=0;y<SubStr.length&&seguir;y++){
-      let char1=aux1[x+y];
-      let char2=aux2[y];
-      if(char1!=char2)
-        seguir=false;
-    }
-    if(seguir)
-      return true;
-  }
-  return false;
-}
-function cargarAlgoritmos(data,algoritmos){
-  fetch(data[algoritmos.length].direccion)
-  .then(response => response.json())
-  .then(elemento => {
-    algoritmos.push(elemento);
-    if(algoritmos.length==data.length)
-      ordenar(data,algoritmos);
-    else
-      cargarAlgoritmos(data,algoritmos);
-  });
-}
-function fmt4(x) {
-  return Number(x.toFixed(4));
 }
 function ImprimirTabla(data,algoritmos){
   TablaCubos=data;
@@ -161,19 +152,13 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =Deform;
     let Parid=fmt4(data[x].difParid.alg/data[x].difParid.parid)+" gands";
     fila.insertCell().textContent =Parid;
-    let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)+((e**data[x].difDeform)-1)+data[x].difParid.alg/data[x].difParid.parid))+" gands";
+    let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)+((e**data[x].difDeform)-1)+
+                  data[x].difParid.alg/data[x].difParid.parid))+" gands";
     fila.insertCell().textContent =Tot;
 }
+  function fmt4(x) {
+  return Number(x.toFixed(4));
 }
-function encontrar(contador,elemento){
-  let x;
-  for(x=0;x<contador.length;x++){
-    if(contador[x].pasos==elemento)
-      return x;
-  }
-  return x;
-}
-
 function calculoDifAlgoritmica(algoritmo){
   let contador=[];
   for(let x=0;x<algoritmo.pasos.length;x++){
@@ -217,25 +202,11 @@ function dificultadAlgoritmicaTotal(algoritmos){
   return (contador_original+contador_espejo/2);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function encontrar(contador,elemento){
+  let x;
+  for(x=0;x<contador.length;x++){
+    if(contador[x].pasos==elemento)
+      return x;
+  }
+  return x;
+}
