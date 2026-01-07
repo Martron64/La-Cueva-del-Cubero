@@ -173,9 +173,9 @@ function fmt4(x) {
 function verCubo(event) {
   let index = event.target.dataset.index;
 
-  console.log("Cubo:", index-1);
-  console.log("Cubo:", TablaCubos[index-1]);
-  console.log("Algoritmos:", ConjuntoAlgoritmos[index-1]);
+  console.log("Cubo:", index);
+  console.log("Cubo:", TablaCubos[index]);
+  console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
 
   //mostrarDetalle(index);
 }
@@ -230,6 +230,7 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+
 
 
 
