@@ -154,10 +154,29 @@ function ImprimirTabla(data,algoritmos){
     let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)*2+((e**data[x].difDeform)-1)*2+
                   data[x].difParid.alg/data[x].difParid.parid))+" gands";
     fila.insertCell().textContent =Tot;
+    let celdaBtn = fila.insertCell();
+    let btn = document.createElement("button");
+    btn.textContent = "Ver cubo";
+
+    // guardás el índice del cubo
+    btn.dataset.index = x;
+
+    // todos usan la misma función
+    btn.addEventListener("click", verCubo);
+
+    celdaBtn.appendChild(btn);
   }
 }
 function fmt4(x) {
   return Number(x.toFixed(4));
+}
+function verCubo(event) {
+  let index = event.target.dataset.index;
+
+  console.log("Cubo:", data[index]);
+  console.log("Algoritmos:", algoritmos[index]);
+
+  //mostrarDetalle(index);
 }
 function calculoDifAlgoritmica(algoritmo){
   let contador=[];
@@ -210,5 +229,6 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+
 
 
