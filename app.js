@@ -93,16 +93,16 @@ function ordenar(data,algoritmos){
 function asignar(objeto,TIPO,algoritmos){
   let aux;
   if (TIPO=="DifTot"){
-      aux=(dificultadAlgoritmicaTotal(algoritmos)+((e**objeto.difBlock)-1)+((e**objeto.difDeform)-1)+objeto.difParid.alg/objeto.difParid.parid);
+      aux=(dificultadAlgoritmicaTotal(algoritmos)+((e**(objeto.difBlock*2))-1)+((e**(objeto.difDeform*2))-1)+objeto.difParid.alg/objeto.difParid.parid);
     }
     else if(TIPO=="DifAlg"){
       aux=dificultadAlgoritmicaTotal(algoritmos);
     }
     else if(TIPO=="DifBlock"){
-      aux=(e**objeto.difBlock)-1;
+      aux=objeto.difBlock;
     }
     else if(TIPO=="DifDeform"){
-      aux=(e**objeto.difDeform)-1;
+      aux=objeto.difDeform;
     }
     else if(TIPO=="DifParid"){
       aux=objeto.difParid.alg/objeto.difParid.parid;
@@ -141,17 +141,17 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =data[x].tipoGiros;
     fila.insertCell().textContent =data[x].pasosMin;
     fila.insertCell().textContent =algoritmos[x].length;
-    let prom=fmt4(dificultadAlgoritmicaPromedio(algoritmos[x]))+" gands";
+    let prom=setprecition(dificultadAlgoritmicaPromedio(algoritmos[x]))+" gands";
     fila.insertCell().textContent =prom;
-    let algTot=fmt4(dificultadAlgoritmicaTotal(algoritmos[x]))+" gands";
+    let algTot=setprecition(dificultadAlgoritmicaTotal(algoritmos[x]))+" gands";
     fila.insertCell().textContent =algTot;
-    let Block=fmt4(((e**data[x].difBlock)-1)*2)+" gands";
+    let Block=setprecition(((e**(data[x].difBlock*2))-1))+" gands";
     fila.insertCell().textContent =Block;
-    let Deform=fmt4(((e**data[x].difDeform)-1)*2)+" gands";
+    let Deform=setprecition((((e**data[x].difDeform*2))-1))+" gands";
     fila.insertCell().textContent =Deform;
-    let Parid=fmt4(data[x].difParid.alg/data[x].difParid.parid)+" gands";
+    let Parid=setprecition(data[x].difParid.alg/data[x].difParid.parid)+" gands";
     fila.insertCell().textContent =Parid;
-    let Tot=fmt4((dificultadAlgoritmicaTotal(algoritmos[x])+((e**data[x].difBlock)-1)*2+((e**data[x].difDeform)-1)*2+
+    let Tot=setprecition((dificultadAlgoritmicaTotal(algoritmos[x])+((e**(data[x].difBlock*2))-1)+((e**(data[x].difDeform*2))-1)+
                   data[x].difParid.alg/data[x].difParid.parid))+" gands";
     fila.insertCell().textContent =Tot;
     let celdaBtn = fila.insertCell();
@@ -167,8 +167,8 @@ function ImprimirTabla(data,algoritmos){
     celdaBtn.appendChild(btn);
   }
 }
-function fmt4(x) {
-  return Number(x.toFixed(4));
+function setprecition(x) {
+  return Number(x.toFixed(2));
 }
 function verCubo(event) {
   let index = event.target.dataset.index;
@@ -199,7 +199,7 @@ function calculoDifAlgoritmica(algoritmo){
     if(contador[x].contador<min)
       min=contador[x].contador;
   }
-  return (contador.length*max/min)*0.25;
+  return (contador.length*max/min);
 }
 
 function dificultadAlgoritmicaPromedio(algoritmos){
@@ -230,6 +230,7 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+
 
 
 
