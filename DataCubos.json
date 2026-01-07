@@ -4,7 +4,7 @@
    "direccion":"algoritmos/3x3.json"},
   
   {"cubo":"Mirror","cantPiezas":26,"tipoPiezas":3,"cantGiros":6,"tipoGiros":1,"pasosMin":7,
-   "difBlock":0,"difDeform":1,"difParid":{"alg":0,"parid":1},
+   "difBlock":0,"difDeform":3,"difParid":{"alg":0,"parid":1},
    "direccion":"algoritmos/Mirror.json"},
   
   {"cubo":"4x4","cantPiezas":56,"tipoPiezas":3,"cantGiros":6,"tipoGiros":1,"pasosMin":9,
