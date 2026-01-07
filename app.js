@@ -177,7 +177,21 @@ function verCubo(event) {
   console.log("Cubo:", TablaCubos[index]);
   console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
 
-  //mostrarDetalle(index);
+  mostrarDetalle(index);
+}
+function mostrarDetalle(i) {
+  let cont = document.getElementById("detalleCubo");
+  cont.hidden = false;
+
+  let cubo = TablaCubos[i];
+  let algs = ConjuntoAlgoritmos[i];
+
+  cont.innerHTML = `
+    <h2>${cubo.cubo}</h2>
+    <p>Piezas: ${cubo.cantPiezas}</p>
+    <p>Dificultad total: ${cubo.difTotal}</p>
+    <button onclick="cerrarDetalle()">Cerrar</button>
+  `;
 }
 function calculoDifAlgoritmica(algoritmo){
   let contador=[];
@@ -230,6 +244,7 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+
 
 
 
