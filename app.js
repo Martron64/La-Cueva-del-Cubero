@@ -241,8 +241,8 @@ function mostrarDetalle(i) {
   cont.innerHTML = `
     <h2>${cubo.cubo}</h2>
     <p>Piezas: ${cubo.cantPiezas}</p>
-    <p>Dificultad total: ${setprecition((dificultadAlgoritmicaTotal(algoritmos[x])+((e**(data[x].difBlock*2))-1)+((e**(data[x].difDeform*2))-1)+
-                  data[x].difParid.alg*data[x].difParid.parid))+" gands"}</p>
+    <p>Dificultad total: ${setprecition((dificultadAlgoritmicaTotal(algs)+((e**(cubo.difBlock*2))-1)+((e**(cubo.difDeform*2))-1)+
+                  cubo.difParid.alg*cubo.difParid.parid))+" gands"}</p>
     <button onclick="cerrarDetalle()">Cerrar</button>
   `;
 }
@@ -250,6 +250,7 @@ function cerrarDetalle() {
   document.getElementById("detalleCubo").hidden = true;
   restaurarTabla();
 }
+
 
 
 
