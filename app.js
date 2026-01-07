@@ -147,7 +147,7 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =algTot;
     let Block=setprecition(((e**(data[x].difBlock*2))-1))+" gands";
     fila.insertCell().textContent =Block;
-    let Deform=setprecition((((e**data[x].difDeform*2))-1))+" gands";
+    let Deform=setprecition(((e**(data[x].difDeform*2))-1))+" gands";
     fila.insertCell().textContent =Deform;
     let Parid=setprecition(data[x].difParid.alg/data[x].difParid.parid)+" gands";
     fila.insertCell().textContent =Parid;
@@ -230,6 +230,7 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+
 
 
 
