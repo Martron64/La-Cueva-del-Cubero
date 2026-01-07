@@ -56,10 +56,9 @@
 <h4> 
     Dificultad promedio de algoritmos: A partir de este punto se empieza a hablar sobre dificultad, aunque este apartado solo dice que 
     tan dificil son, en promedio, los algoritmos utilizador. Para el calculo de dificultad de un algoritmo se va a utilizar la formula
-    "(mov_h + mov_a).(mov_mayor/mov_menor).k", donde mov_h, son la cantidad de caras que se mueven en sentido horario, mov_a la cantidad 
-    que se mueve en anti-horario, mov_mayor son la cantidad de veces que se mueve la cara con mas movimiento, mov_menor, la cantidad 
-    de veces que se mueve la cara con menor movimiento, y k es un factor de ponderacion, para mantener coherencia en el calculo de 
-    dificultad (estos ultimos dos, no es indepentiende de si la cara se mueve en un sentido o en otro, sino que si se mueve mas veces en 
+    "(mov_h + mov_a).(mov_mayor/mov_menor)", donde mov_h, son la cantidad de caras que se mueven en sentido horario, mov_a la cantidad 
+    que se mueve en anti-horario, mov_mayor son la cantidad de veces que se mueve la cara con mas movimiento, y mov_menor, la cantidad 
+    de veces que se mueve la cara con menor movimiento(estos ultimos dos, no es indepentiende de si la cara se mueve en un sentido o en otro, sino que si se mueve mas veces en 
     un sentido, y menos en otro, la cantidad en un sentido puede ser usara como el mayor, y el otro como el menor)
 </h4>
 <h4> 
@@ -161,7 +160,8 @@ Buscar cubo:
     <th>dificultad total del cubo</th>
     <th>Ver cubo</th>
   </tr>
-</table> 
+</table>
+<div id="detalleCubo" hidden></div>    
 <h1>.</h1>
 <h1>.</h1>
 <h1>.</h1>
@@ -169,6 +169,7 @@ Buscar cubo:
 <script src="./app.js" defer></script>
 </body>    
 </html>
+
 
 
 
