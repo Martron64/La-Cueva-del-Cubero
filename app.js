@@ -1,6 +1,8 @@
+let FILAS_VISIBLES = 5;
 let e=2.718281828459;
 let TablaCubos=[];
 let ConjuntoAlgoritmos=[];
+let cuboActivo = null;
 document.addEventListener("DOMContentLoaded", () => {
   actualizar();
 });
@@ -166,6 +168,12 @@ function ImprimirTabla(data,algoritmos){
 
     celdaBtn.appendChild(btn);
   }
+  let cont = document.getElementById("contenedorTabla");
+if (data.length <= FILAS_VISIBLES) {
+  cont.style.overflowY = "hidden";
+} else {
+  cont.style.overflowY = "auto";
+}
 }
 function setprecition(x) {
   return Number(x.toFixed(2));
@@ -238,13 +246,22 @@ function mostrarDetalle(i) {
   let cubo = TablaCubos[i];
   let algs = ConjuntoAlgoritmos[i];
 
-  cont.innerHTML = `
+  document.getElementById("detalleHeader").innerHTML = `
     <h2>${cubo.cubo}</h2>
     <p>Piezas: ${cubo.cantPiezas}</p>
-    <p>Dificultad total: ${setprecition((dificultadAlgoritmicaTotal(algs)+((e**(cubo.difBlock*2))-1)+((e**(cubo.difDeform*2))-1)+
-                  cubo.difParid.alg*cubo.difParid.parid))+" gands"}</p>
-    <button onclick="cerrarDetalle()">Cerrar</button>
+    <p>Dificultad total: ${
+      setprecition(
+        dificultadAlgoritmicaTotal(algs)
+        + ((e**(cubo.difBlock*2))-1)
+        + ((e**(cubo.difDeform*2))-1)
+        + cubo.difParid.alg * cubo.difParid.parid
+      )
+    } gands</p>
   `;
+
+  document.getElementById("detalleFooter").innerHTML =
+    `<button onclick="cerrarDetalle()">Cerrar</button>`;
+
   cargarDescripcion(i);
 }
 function cerrarDetalle() {
@@ -269,8 +286,11 @@ function cargarDescripcion(cuboId) {
           cont.appendChild(img);
         }
       }
+      let cont = document.getElementById("detalleContenido");
+      cont.innerHTML = "";
     });
 }
+
 
 
 
