@@ -286,10 +286,11 @@ function cargarDescripcion(cuboId) {
           cont.appendChild(img);
         }
       }
-      let cont = document.getElementById("detalleContenido");
-      cont.innerHTML = "";
+      let boton = document.getElementById("detalleContenido");
+      boton.innerHTML = "";
     });
 }
+
 
 
 
