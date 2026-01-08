@@ -4,8 +4,8 @@ img {
   display: block;
 }
 #detalleContenido img {
-  max-width: 200px;   /* ajustás a gusto */
-  width: 50%;
+  max-width: 400px;   /* ajustás a gusto */
+  width: 100%;
   height: auto;
   display: block;
   margin: 10px auto;
@@ -27,6 +27,7 @@ img {
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
