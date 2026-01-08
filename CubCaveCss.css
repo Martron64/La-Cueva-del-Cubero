@@ -9,10 +9,18 @@ img {
   height: auto;
   display: block;
   margin: 10px auto;
+  border: 5px rgb(167, 102, 28) groove;
 }
+/*
+rgb(121,84,40) groove
+rgb(121,84,40) inset
+rgb(121,84,40) outset
+rgb(121,84,40) ridge
+*/
 #contenedorTabla {
   max-height: calc(5 * 40px); /* 5 filas visibles */
   overflow-y: auto;
+  border: 2px black solid;
 }
 
 #tablaCubos tr {
@@ -27,6 +35,7 @@ img {
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
