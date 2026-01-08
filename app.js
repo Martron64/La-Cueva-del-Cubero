@@ -231,14 +231,14 @@ function encontrar(contador,elemento){
   return x;
 }
 function verCubo(event) {
-  let index = event.target.dataset.index;
+  let index = Number(event.target.dataset.index);
   console.log("Cubo:", index);
   console.log("Cubo:", TablaCubos[index]);
   console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
   if (cuboActivo === index) {
     cerrarDetalle();
-    cuboActivo = null;
-  } else {
+  } 
+  else {
     cuboActivo = index;
     mostrarSoloFila(index);
     mostrarDetalle(index);
@@ -267,33 +267,47 @@ function mostrarDetalle(i) {
   let cubo = TablaCubos[i];
   let algs = ConjuntoAlgoritmos[i];
 
+  // HEADER
   document.getElementById("detalleHeader").innerHTML = `
     <h2>${cubo.cubo}</h2>
     <p>Piezas: ${cubo.cantPiezas}</p>
     <p>Dificultad total: ${
       setprecition(
         dificultadAlgoritmicaTotal(algs)
-        + ((e**(cubo.difBlock*2))-1)
-        + ((e**(cubo.difDeform*2))-1)
+        + ((e ** (cubo.difBlock * 2)) - 1)
+        + ((e ** (cubo.difDeform * 2)) - 1)
         + cubo.difParid.alg * cubo.difParid.parid
       )
     } gands</p>
   `;
 
+  // FOOTER
   document.getElementById("detalleFooter").innerHTML =
     `<button onclick="cerrarDetalle()">Cerrar</button>`;
 
+  // CONTENIDO (se carga aparte)
   cargarDescripcion(i);
 }
 function cerrarDetalle() {
   document.getElementById("detalleCubo").hidden = true;
+
+  // limpiar contenido
+  document.getElementById("detalleHeader").innerHTML = "";
+  document.getElementById("detalleContenido").innerHTML = "";
+  document.getElementById("detalleFooter").innerHTML = "";
+
   restaurarTabla();
+  cuboActivo = null;
 }
 function cargarDescripcion(cuboId) {
   fetch(TablaCubos[cuboId].descripcion)
     .then(r => r.json())
     .then(elementos => {
-      let cont = document.getElementById("detalleCubo");
+
+      let cont = document.getElementById("detalleContenido");
+
+      // 🔴 CLAVE: limpiar antes de cargar
+      cont.innerHTML = "";
 
       for (let e of elementos) {
         if (e.tipo === "texto") {
@@ -304,24 +318,14 @@ function cargarDescripcion(cuboId) {
         else if (e.tipo === "imagen") {
           let img = document.createElement("img");
           img.src = e.contenido;
+
+          // 🔹 tamaño fijo de imagen (después ajustás)
+          img.style.maxWidth = "400px";
+          img.style.display = "block";
+          img.style.marginBottom = "10px";
+
           cont.appendChild(img);
         }
       }
-      let boton = document.getElementById("detalleContenido");
-      boton.innerHTML = "";
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
