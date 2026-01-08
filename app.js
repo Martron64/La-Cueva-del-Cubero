@@ -178,15 +178,7 @@ if (data.length <= FILAS_VISIBLES) {
 function setprecition(x) {
   return Number(x.toFixed(2));
 }
-function verCubo(event) {
-  let index = event.target.dataset.index;
 
-  console.log("Cubo:", index);
-  console.log("Cubo:", TablaCubos[index]);
-  console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
-
-  mostrarDetalle(index);
-}
 function calculoDifAlgoritmica(algoritmo){
   let contador=[];
   for(let x=0;x<algoritmo.pasos.length;x++){
@@ -238,7 +230,36 @@ function encontrar(contador,elemento){
   }
   return x;
 }
+function verCubo(event) {
+  let index = event.target.dataset.index;
+  console.log("Cubo:", index);
+  console.log("Cubo:", TablaCubos[index]);
+  console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
+  if (cuboActivo === index) {
+    cerrarDetalle();
+    cuboActivo = null;
+  } else {
+    cuboActivo = index;
+    mostrarSoloFila(index);
+    mostrarDetalle(index);
+  }
+  console.log("Cubo:", index);
+  console.log("Cubo:", TablaCubos[index]);
+  console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
+}
+function mostrarSoloFila(index) {
+  let filas = document.getElementById("tablaCubos").rows;
+  for (let i = 1; i < filas.length; i++) {
+    filas[i].style.display = (i - 1 === index) ? "" : "none";
+  }
+}
 
+function restaurarTabla() {
+  let filas = document.getElementById("tablaCubos").rows;
+  for (let i = 1; i < filas.length; i++) {
+    filas[i].style.display = "";
+  }
+}
 function mostrarDetalle(i) {
   let cont = document.getElementById("detalleCubo");
   cont.hidden = false;
@@ -290,6 +311,7 @@ function cargarDescripcion(cuboId) {
       boton.innerHTML = "";
     });
 }
+
 
 
 
