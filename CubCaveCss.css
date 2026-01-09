@@ -15,7 +15,7 @@ img {
   border-right-style: groove;
   border-color: rgb(167, 102, 28);
   border-width: 5px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 /*
 rgb(121,84,40) groove
@@ -41,6 +41,7 @@ rgb(121,84,40) ridge
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
