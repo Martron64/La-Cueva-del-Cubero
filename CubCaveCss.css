@@ -9,7 +9,10 @@ img {
   height: auto;
   display: block;
   margin: 10px auto;
-  border-style: groove;
+  border-top-style: ridge;
+  border-left-style: ridge;
+  border-bottom-style: groove;
+  border-right-style: groove;
   border-color: rgb(167, 102, 28);
   border-width: 5px;
   border-radius: 10px;
@@ -38,6 +41,7 @@ rgb(121,84,40) ridge
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
