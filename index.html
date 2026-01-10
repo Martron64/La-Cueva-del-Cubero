@@ -76,7 +76,7 @@
             nivel 0: no bloqueo
           </li>
           <li>
-            nivel 1: hay que "alinear" el cubo para girar (ej: pentacle, square-one, polarir)
+            nivel 1: hay que "alinear" el cubo para girar (ej: pentacle, square-one, polaris)
           </li>
           <li>
             nivel 2: Alguna piezas se bloquean en ciertos casos (ej:Puppet V2)
@@ -85,27 +85,29 @@
             nivel 3: hay piezas que solo se pueden mover a traves de algoritmos (ej: Puppet V1)
           </li>  
         </ul> 
-        La dificultad se calcula con e^2n-1, con n siendo el nivel.
+        La dificultad se calcula con e^2n-1, con n siendo el nivel. La dificultad por bloqueo, dependera o afectara de manera directa
+        o indirectamente de la cantidad y dificultad algoritmica, y esta relacion dependera netamente del tipo de cubo de rubik.
       </p> 
       <p> 
         Dificultad por Deformacion: Hay cubos de rubik que presentan deformaciones, o que presentan siertos patrones en sus piezas
         que aumentan su dificultad, (como el cubo sudoku), donde al igual que el anterior, hay de 4 niveles.
-      <ul>
-        <li>
-          nivel 0: no deformacion
-        </li>
-        <li>
-        nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 3x3)
-        </li>
-        <li>
-        nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada pieza, y su tipo (ej: axis 3x3)
-        </li>
-        <li>
-        nivel 3: ya se confunden las piezas, no el tipo, pero es dificil diferenciar, por ejemplo, una esquina de otra (ej: ghost 3x3, 
-        sudoku 3x3) 
-        </li>
-      </ul> 
-        La dificultad se calcula con e^2n-1, con n siendo el nivel.
+        <ul>
+          <li>
+            nivel 0: no deformacion
+          </li>
+          <li>
+          nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 3x3)
+          </li>
+          <li>
+          nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada pieza, y su tipo (ej: axis 3x3)
+          </li>
+          <li>
+          nivel 3: ya se confunden las piezas, no el tipo, pero es dificil diferenciar, por ejemplo, una esquina de otra (ej: ghost 3x3, 
+          sudoku 3x3) 
+          </li>
+        </ul> 
+        La dificultad se calcula con e^2n-1, con n siendo el nivel. La dificultad por deformacion, al afectar simplemente la estetica de
+        las piezas, va a sentirse en mayor o menor medida dependiendo de la cantidad de piezas del cubo de rubik.
       </p>
       <p> 
         Dificultad por Paridad: Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una variacion de 
@@ -180,6 +182,7 @@
     
   </body>    
 </html>
+
 
 
 
