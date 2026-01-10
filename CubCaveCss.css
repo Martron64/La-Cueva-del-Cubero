@@ -37,8 +37,12 @@ rgb(121,84,40) ridge
   max-height: calc(5 * 40px); /* 5 filas visibles */
   overflow-y: auto;
   border: 2px black solid;
+  border-collapse: collapse;
+  width: 100%;
 }
-
+th, tr{
+  border: 1px black solid;
+}
 #tablaCubos tr {
   height: 40px;
 }
@@ -51,6 +55,7 @@ rgb(121,84,40) ridge
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
