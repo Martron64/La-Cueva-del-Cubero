@@ -8,6 +8,15 @@ body{
   margin: 120px 120px 120px 120px;
   background-color: rgb(254, 245, 245);
 }
+#buscador{
+  background-color: rgb(254, 245, 245);
+}
+#Tipo{
+  background-color: rgb(254, 245, 245);
+}
+#Orden{
+  background-color: rgb(254, 245, 245);
+}
 img {
   max-width: 100%;
   height: auto;
@@ -60,6 +69,7 @@ rgb(121,84,40) ridge
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
