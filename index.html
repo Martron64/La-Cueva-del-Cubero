@@ -20,41 +20,65 @@
       <h3>
         La tabla presentada intenta resolver dicho inconveniente mostrando detalles del cubo:
       </h3>
+      <p class='indicador'>
+        Nombre: 
+      </p>
       <p> 
-        Nombre: Simplemente el nombre del cubo, aunque algunos tendran una un agregado como lo puede ser "(fd_red)", o "(fd_com)", 
+        Simplemente el nombre del cubo, aunque algunos tendran una un agregado como lo puede ser "(fd_red)", o "(fd_com)", 
         que significan Fridich reducido y Fridich completo. Esto signofoca que la dificultad a mostrar no es la del cubo en si, 
         sino la de un metodo de resolucion mas dificil que busca resolverlo mas rapido y en menos pasos. De no tener ningun añadido, 
         es el metodo principiante
       </p>
-      <p> 
-        Cantidad de piezas: La cantidad de piezas del cubo de rubik
+      <p class='indicador'>
+        Cantidad de piezas: 
       </p>
       <p> 
-        Tipo de piezas: para las personas que piensen que, en el cubo de rubik clasico, cada cuadrado de color es una pieza unica, que 
+        La cantidad de piezas del cubo de rubik
+      </p>
+      <p class='indicador'>
+        Tipo de piezas: 
+      </p>
+      <p> 
+        para las personas que piensen que, en el cubo de rubik clasico, cada cuadrado de color es una pieza unica, que 
         puede ser cambiada por cualquier otra, este apartado puede no tener sentido, pero, por ejemplo, el cubo de rubik 3x3, no presenta
         54 piezas distintas (9 piezas por 6 caras), sino que presenta 26, porque son 6 centros (piezas de un color), 12 aristas (piezas de 
         12 colores) y 8 esquinas (piezas de 3 colores). Con lo que este apartado sirve para saber justamente eso, en cuantos conjuntos se 
         dividen las piezas
       </p>
-      <p> 
-        Cantidad de giros: La cantidad de centros de giro que presenta el cubo de rubik
+      <p class='indicador'>
+        Cantidad de giros: 
       </p>
       <p> 
-        Tipos de Giros: Para una persona que nunca haya visto una variacion, esto se debe, a que existen cubos con mas de un tipo de giro. 
+        La cantidad de centros de giro que presenta el cubo de rubik
+      </p>
+      <p class='indicador'>
+        Tipos de Giros: 
+      </p>
+      <p> 
+        Para una persona que nunca haya visto una variacion, esto se debe, a que existen cubos con mas de un tipo de giro. 
         El 3x3 tiene solo 1, pero cubos como el square-one presentan 2 (2 de tipo centro y 2 de tipo de movimiento de cara)
       </p>
-      <p> 
-        Pasos minimos: Esto depende del metodo utilizado, y determina la cantidad de pasos minimos que presenta parapoder armar un cubo de 
-        rubik (el metodo principiante del 3x3 presenta 7, mientras que el Fridich reducido presenta 4)
+      <p class='indicador'>
+        Pasos minimos: 
       </p>
       <p> 
-        Cantidad de Algoritmos: Los algoritmos son la base de resolucios de todos (o de al menos mas del %95) los cubos de rubik. Son una
+        Esto depende del metodo utilizado, y determina la cantidad de pasos minimos que presenta parapoder armar un cubo de 
+        rubik (el metodo principiante del 3x3 presenta 7, mientras que el Fridich reducido presenta 4)
+      </p>
+      <p class='indicador'>
+        Cantidad de Algoritmos: 
+      </p>
+      <p> 
+        Los algoritmos son la base de resolucios de todos (o de al menos mas del %95) los cubos de rubik. Son una
         serie concreta de movimientos que genera un cambio conocido en ciertas piezas, dejando intacta otras que generalmente son las que 
         queremos evitar (el tipico caso de armo una cara, y cuando quiero armar otra desarmo lo que ya hice). Este apartado muestra el 
         minimo de algoritmos nescesarios para poder armar el cubo con cierto metodo
       </p>
+      <p class='indicador'>
+        Dificultad promedio de algoritmos: 
+      </p>
       <p> 
-        Dificultad promedio de algoritmos: A partir de este punto se empieza a hablar sobre dificultad, aunque este apartado solo dice que 
+        A partir de este punto se empieza a hablar sobre dificultad, aunque este apartado solo dice que 
         tan dificil son, en promedio, los algoritmos utilizador. Para el calculo de dificultad de un algoritmo se va a utilizar la formula
         "(mov_h + mov_a).(mov_mayor/mov_menor)", donde mov_h, son la cantidad de caras que se mueven en sentido horario, mov_a la cantidad 
         que se mueve en anti-horario, mov_mayor son la cantidad de veces que se mueve la cara con mas movimiento, y mov_menor, la cantidad 
@@ -62,15 +86,21 @@
         en otro, sino que si se mueve mas veces en un sentido, y menos en otro, la cantidad en un sentido puede ser usara como el mayor, 
         y el otro como el menor)
       </p>
+      <p class='indicador'>
+        Dificultad Algoritmica total: 
+      </p>
       <p> 
-        Dificultad Algoritmica total: Aca ya entran detalles como el que puede ser que cuesta mas saberte ciertos algoritmos, y 
+        Aca ya entran detalles como el que puede ser que cuesta mas saberte ciertos algoritmos, y 
         otros, por ser espejados (es decir, si el original dice mover la derecha arriba, y arriba a la izquierda, el espejo dice, mover la
         izquierda arriba, y arriba a la derehca), son mas faciles, con lo que la formula utilizada va a ser "(dif_alg_ori) + 
         (dif_alg_esp)/2", donde dif_alg_org es la suma de las dificultades de los algoritmos originales incluidos los inversos (que es lo 
         mismo a "deshacer" un algoritmo), y dif_alg_esp es la suma de la dificultad de los algoritmos espejos 
       </p>
+      <p class='indicador'>
+        Dificultad por Bloqueo: 
+      </p>
       <p> 
-        Dificultad por Bloqueo: Algunos cubos de rubik pueden llegar a presentar bloqueos, que pueden ser 1 de 4 niveles.
+        Algunos cubos de rubik pueden llegar a presentar bloqueos, que pueden ser 1 de 4 niveles.
         <ul>
           <li> 
             nivel 0: no bloqueo
@@ -87,9 +117,12 @@
         </ul> 
         La dificultad se calcula con e^2n-1, con n siendo el nivel. La dificultad por bloqueo, dependera o afectara de manera directa
         o indirectamente de la cantidad y dificultad algoritmica, y esta relacion dependera netamente del tipo de cubo de rubik.
+      </p>
+      <p class='indicador'>
+        Dificultad por Deformacion: 
       </p> 
       <p> 
-        Dificultad por Deformacion: Hay cubos de rubik que presentan deformaciones, o que presentan siertos patrones en sus piezas
+        Hay cubos de rubik que presentan deformaciones, o que presentan siertos patrones en sus piezas
         que aumentan su dificultad, (como el cubo sudoku), donde al igual que el anterior, hay de 4 niveles.
         <ul>
           <li>
@@ -109,15 +142,21 @@
         La dificultad se calcula con e^2n-1, con n siendo el nivel. La dificultad por deformacion, al afectar simplemente la estetica de
         las piezas, va a sentirse en mayor o menor medida dependiendo de la cantidad de piezas del cubo de rubik.
       </p>
+      <p class='indicador'>
+        Dificultad por Paridad: 
+      </p>
       <p> 
-        Dificultad por Paridad: Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una variacion de 
+        Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una variacion de 
         otro cubo, como el 4x4 variacion del 3x3, por ejemplo, al llegar a la etapa de la cruz amarilla, en el 3x3 es imposible que solo 
         esten dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera de los dos 
         casos "impocibles. El calculo de la dificultad es "alg_parid*cant_parid", donde alg_parid son los algoritmos que resuelven la paridad
         , y cant_parid la cantidad de paridades
+      </p>
+      <p class='indicador'>
+        Dificultad total: 
       </p> 
       <p> 
-        Dificultad total: Dada por "Dificultad_algoritmica_total + dificultad_por_cloqueo + dificultad_por_deformacion + 
+        Dada por "Dificultad_algoritmica_total + dificultad_por_cloqueo + dificultad_por_deformacion + 
         dificultad_por_paridad"
       </p>  
     </div>  
@@ -182,6 +221,7 @@
     
   </body>    
 </html>
+
 
 
 
