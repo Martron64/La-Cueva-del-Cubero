@@ -44,7 +44,7 @@ rgb(121,84,40) ridge
 }
 #tablaCubos th,
 #tablaCubos td{
-   border-bottom: 1px solid rgba(0,0,0,1);
+   border: 1px solid rgba(0,0,0,1);
 }
 #tablaCubos tr {
   height: 40px;
@@ -58,6 +58,7 @@ rgb(121,84,40) ridge
 .fila-imagenes img {
   max-width: 45%;
 }
+
 
 
 
