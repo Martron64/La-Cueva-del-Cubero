@@ -7,6 +7,9 @@ body{
   padding:20px;
   margin: 120px 120px 120px 120px;
   background-color: rgb(254, 245, 245);
+  
+  display:block;
+  background-color: rgb(254, 245, 245);
 }
 #buscador,
 #Tipo,
@@ -14,6 +17,7 @@ body{
   font-size: 20px;
   padding: 6px 10px;
   background-color: rgb(254, 245, 245);
+  width: 30px
 }
 img {
   max-width: 100%;
@@ -97,6 +101,7 @@ rgb(121,84,40) ridge
   font-weight: bold;
   text-decoration: underline;
 }
+
 
 
 
