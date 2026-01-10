@@ -89,6 +89,10 @@ rgb(121,84,40) ridge
 .ORDENADOR{
   font-size: 25px;
 }
+.indicador{
+  text-decoration:underline;
+  display: inline;
+}
 
 
 
