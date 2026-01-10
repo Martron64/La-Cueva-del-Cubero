@@ -10,7 +10,6 @@ body{
 }
 #buscador #Tipo #Orden{
   background-color: rgb(254, 245, 245);
-  width: 50px;
 }
 img {
   max-width: 100%;
@@ -81,8 +80,13 @@ rgb(121,84,40) ridge
   padding:0px 30px 40px;
 }
 .SubTitle2{
-  font-size: 50px;
+  font-size: 75px;
   text-align: center;
+  text-shadow:5px 5px 10px red;
+  font-family: Arial;
+}
+.ORDENADOR{
+  font-size: 25px;
 }
 
 
