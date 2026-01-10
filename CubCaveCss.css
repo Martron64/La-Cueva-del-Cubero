@@ -8,14 +8,9 @@ body{
   margin: 120px 120px 120px 120px;
   background-color: rgb(254, 245, 245);
 }
-#buscador{
+#buscador #Tipo #Orden{
   background-color: rgb(254, 245, 245);
-}
-#Tipo{
-  background-color: rgb(254, 245, 245);
-}
-#Orden{
-  background-color: rgb(254, 245, 245);
+  font-size: 50px;
 }
 img {
   max-width: 100%;
@@ -86,9 +81,10 @@ rgb(121,84,40) ridge
   padding:0px 30px 40px;
 }
 .SubTitle2{
-  width: 100%;
+  font-size: 100%;
   text-align: center;
 }
+
 
 
 
