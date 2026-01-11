@@ -100,6 +100,40 @@ rgb(121,84,40) ridge
   font-weight: bold;
   text-decoration: underline;
 }
+.filtros {
+  background-color: rgb(254, 245, 245);
+  padding: 15px 20px;
+  margin: 20px auto;
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filtros input,
+.filtros select,
+.filtros button {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.filtros button {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+}
 
 
 
