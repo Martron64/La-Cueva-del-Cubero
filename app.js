@@ -21,7 +21,7 @@ const btnOrden = document.getElementById("btnOrden");
 
 btnOrden.addEventListener("click", () => {
   ordenAscendente = !ordenAscendente;
-  btnOrden.textContent = ordenAscendente ? "⬆" : "⬇";
+  btnOrden.textContent = ordenAscendente ? "Ascendente-⬆" : "Descendente-⬇";
   actualizar();
 });
 function actualizar(){
@@ -354,6 +354,7 @@ function cargarDescripcion(cuboId) {
       }
     });
 }
+
 
 
 
