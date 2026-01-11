@@ -94,7 +94,7 @@ rgb(121,84,40) ridge
   font-family: Arial;
 }
 .MargenTitle2{
-  margin:0px 50px 0px 50px;
+  margin:0px 100px 0px 100px;
 }
 .ORDENADOR{
   justify-content: center;
@@ -169,6 +169,7 @@ rgb(121,84,40) ridge
 .oculto {
   display: none;
 }
+
 
 
 
