@@ -3,12 +3,19 @@ let e=2.718281828459;
 let TablaCubos=[];
 let ConjuntoAlgoritmos=[];
 let cuboActivo = null;
+let ordenAscendente = false; // false = descendente
 document.addEventListener("DOMContentLoaded", () => {
   actualizar();
 });
 document.getElementById("buscador").addEventListener("input", actualizar);
 document.getElementById("Tipo").addEventListener("change", actualizar);
-document.getElementById("Orden").addEventListener("change", actualizar);
+const btnOrden = document.getElementById("btnOrden");
+
+btnOrden.addEventListener("click", () => {
+  ordenAscendente = !ordenAscendente;
+  btnOrden.textContent = ordenAscendente ? "⬆" : "⬇";
+  actualizar;
+});
 function actualizar(){
   fetch("DataCubos.json")
   .then(response => response.json())
@@ -69,19 +76,18 @@ function cargarAlgoritmos(data,algoritmos){
 }
 function ordenar(data,algoritmos){
   let TIPO=document.getElementById("Tipo").value;
-  let A_D =document.getElementById("Orden").value;
   for(let x=0;x<data.length-1;x++){
     let aux1=asignar(data[x],TIPO,algoritmos[x]);
     let min=aux1;
     let idmin=x;
     for(let y=x+1;y<data.length;y++){
        let aux2=asignar(data[y],TIPO,algoritmos[y]);
-       if(comparar(aux2,min,A_D)){
+       if(comparar(aux2,min)){
          min=aux2;
          idmin=y;
        }
      }
-     if(comparar(min,aux1,A_D)){
+     if(comparar(min,aux1)){
        let aux3=data[x];
        data[x]=data[idmin];
        data[idmin]=aux3;
@@ -124,10 +130,10 @@ function asignar(objeto,TIPO,algoritmos){
   return aux;
 }
 
-function comparar(A,B,A_D){
-  if(A_D=="Asc")
+function comparar(A,B){
+  if(ordenAscendente)
     return B<A;
-  else if(A_D=="Des")
+  else
     return A<B;
 }
 function ImprimirTabla(data,algoritmos){
@@ -340,5 +346,6 @@ function cargarDescripcion(cuboId) {
       }
     });
 }
+
 
 
