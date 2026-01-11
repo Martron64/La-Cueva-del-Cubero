@@ -14,7 +14,7 @@ const btnOrden = document.getElementById("btnOrden");
 btnOrden.addEventListener("click", () => {
   ordenAscendente = !ordenAscendente;
   btnOrden.textContent = ordenAscendente ? "⬆" : "⬇";
-  actualizar;
+  actualizar();
 });
 function actualizar(){
   fetch("DataCubos.json")
@@ -346,6 +346,7 @@ function cargarDescripcion(cuboId) {
       }
     });
 }
+
 
 
 
