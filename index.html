@@ -164,31 +164,29 @@
       <h2 class='SubTitle2'>
         Tabla de Dificultad
       </h2>
-      <label class='ORDENADOR'>
-        Buscar cubo:
-        <input type="text" id="buscador" placeholder="3x3, 4x4, mirror...">
-      </label>
-      <label class='ORDENADOR'>
-        Ordenar por:
-        <select id="Tipo">
-          <option value="DifTot">Dificultad total </option>
-          <option value="DifAlg">Dificultad algoritmica </option>
-          <option value="DifBlock">Dificultad por bloqueo </option>
-          <option value="DifDeform">Dificultad por deformacion </option>
-          <option value="DifParid">Dificultad por paridad </option>
-          <option value="CantPiezas">Cantidad de piezas </option>
-          <option value="CantGiros">Cantidad de giros </option>
-          <option value="CantAlg">cantidad de algoritmos </option>
-          <option value="Nombre">Nombre </option>
-        </select>
-      </label>
-      <label class='ORDENADOR'>
-        Orden:
-        <select id="Orden">
-          <option value="Des">Descendente</option>
-          <option value="Asc">Ascendente </option>
-        </select>
-      </label>
+      <div class="filtros">
+        <label>
+          Buscar cubo:
+          <input type="text" id="buscador" placeholder="3x3, 4x4, mirror...">
+        </label>
+
+        <label>
+          Ordenar por:
+          <select id="Tipo">
+            <option value="DifTot">Dificultad total</option>
+            <option value="DifAlg">Dificultad algoritmica</option>
+            <option value="DifBlock">Dificultad por bloqueo</option>
+            <option value="DifDeform">Dificultad por deformacion</option>
+            <option value="DifParid">Dificultad por paridad</option>
+            <option value="CantPiezas">Cantidad de piezas</option>
+            <option value="CantGiros">Cantidad de giros</option>
+            <option value="CantAlg">Cantidad de algoritmos</option>
+            <option value="Nombre">Nombre</option>
+          </select>
+        </label>
+
+        <button id="btnOrden" type="button">⬇</button>
+      </div>
       <div id="contenedorTabla">
         <table id="tablaCubos">
           <tr>
@@ -221,6 +219,7 @@
     
   </body>    
 </html>
+
 
 
 
