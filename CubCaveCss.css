@@ -169,25 +169,12 @@ rgb(121,84,40) ridge
 .oculto {
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.formula {
+  font-family: "Cambria Math", "Times New Roman", serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgb(245, 240, 240);
+  border-radius: 8px;
+}
