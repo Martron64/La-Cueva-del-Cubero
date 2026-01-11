@@ -87,7 +87,7 @@ rgb(121,84,40) ridge
 }
 .SubTitle2{
   font-size: 75px;
-  magin:30px 0px ;
+  magin:10px 0px ;
   text-align: center;
   text-decoration:underline;
   background-color: rgba(254, 245, 245, 0.20);
@@ -164,6 +164,7 @@ rgb(121,84,40) ridge
   border-radius: 6px;
   margin-top: 5px;
 }
+
 
 
 
