@@ -177,12 +177,13 @@ rgb(121,84,40) ridge
 .ImagenPrincipal{
   text-align: center;
   border:none;
-  width: 400px;
+  width: 350px;
   height: 300px;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 
 
