@@ -3,7 +3,7 @@
 <html> 
   <head>
     <link rel="icon" type="image/png" href="ImagenIcono.png">
-    <title>La Cueva del Cubero</title>
+    <title>CubCave</title>
     <link rel="stylesheet" href="CubCaveCss.css">
     <script>
       MathJax = {
@@ -22,20 +22,21 @@
         Como funciona el sistema de dificultad?
       </h2>
       <h3>
-        La dificultad de un cubo de rubik no es medible con un simple "este me costo mas que este", contando la cantidad de piezas o 
-        giros, o de una forma lineal, varia dependiendo ciertos parametros, independientes unos de otros.
+        La dificultad de un cubo de rubik no es medible con un simple "este me costo mas que este", contando la 
+        cantidad de piezas o giros, o de una forma lineal, varia dependiendo ciertos parametros, independientes 
+        unos de otros.
       </h3>
       <h3>
-        La tabla presentada intenta resolver dicho inconveniente mostrando detalles del cubo:
+        La tabla presentada intenta resolver dicho inconveniente mostrando detalles del cubo como:
       </h3>
       <div class="info-cubo">
         <div class="fila-info">
           <button class="toggle">Nombre:</button>
           <div class="contenido oculto">
-            Simplemente el nombre del cubo, aunque algunos tendran una un agregado como lo puede ser "(fd_red)", o "(fd_com)", 
-            que significan Fridich reducido y Fridich completo. Esto signofoca que la dificultad a mostrar no es la del cubo en si, 
-            sino la de un metodo de resolucion mas dificil que busca resolverlo mas rapido y en menos pasos. De no tener ningun añadido, 
-            es el metodo principiante  
+            Simplemente el nombre del cubo, aunque algunos tendran una un agregado como lo puede ser "(fd_red)", o 
+            "(fd_com)", que significan Fridich reducido y Fridich completo. Esto signofoca que la dificultad a 
+            mostrar no es la del cubo en si, sino la de un metodo de resolucion mas dificil que busca resolverlo 
+            mas rapido y en menos pasos. De no tener ningun añadido, es el metodo principiante  
           </div>
         </div>
         <div class="fila-info">
@@ -47,11 +48,12 @@
         <div class="fila-info">
           <button class="toggle">Tipo de piezas:</button>
           <div class="contenido oculto">
-            para las personas que piensen que, en el cubo de rubik clasico, cada cuadrado de color es una pieza unica, que 
-            puede ser cambiada por cualquier otra, este apartado puede no tener sentido, pero, por ejemplo, el cubo de rubik 3x3, no 
-            presenta 54 piezas distintas (9 piezas por 6 caras), sino que presenta 26, porque son 6 centros (piezas de un color), 12 
-            aristas (piezas de 12 colores) y 8 esquinas (piezas de 3 colores). Con lo que este apartado sirve para saber justamente 
-            eso, en cuantos conjuntos se dividen las piezas
+            Para las personas que piensen que, en el cubo de rubik clasico, cada cuadrado de color es una pieza 
+            unica, que puede ser cambiada por cualquier otra, este apartado puede no tener sentido, pero, por 
+            ejemplo, el cubo de rubik 3x3, no presenta 54 piezas distintas (9 piezas por 6 caras), sino que 
+            presenta 26, porque son 6 centros (piezas de un color), 12 aristas (piezas de 12 colores) y 8 esquinas 
+            (piezas de 3 colores). Con lo que este apartado sirve para saber justamente eso, en cuantos conjuntos 
+            se dividen las piezas
           </div>
         </div>
         <div class="fila-info">
@@ -63,57 +65,73 @@
         <div class="fila-info">
           <button class="toggle">Tipos de Giros:</button>
           <div class="contenido oculto">
-            Para una persona que nunca haya visto una variacion, esto se debe, a que existen cubos con mas de un tipo de giro. 
-            El 3x3 tiene solo 1, pero cubos como el square-one presentan 2 (2 de tipo centro y 2 de tipo de movimiento de cara)  
+            Para una persona que nunca haya visto una variacion, esto se debe, a que existen cubos con mas de un 
+            tipo de giro. El 3x3 tiene solo 1, pero cubos como el square-one presentan 2 (2 de tipo centro y 2 de 
+            tipo de movimiento de cara)  
           </div>
         </div>
         <div class="fila-info">
           <button class="toggle">Pasos minimos:</button>
           <div class="contenido oculto">
-            Esto depende del metodo utilizado, y determina la cantidad de pasos minimos que presenta parapoder armar un cubo de 
-            rubik (el metodo principiante del 3x3 presenta 7, mientras que el Fridich reducido presenta 4)
+            Esto depende del metodo utilizado, y determina la cantidad de pasos minimos que presenta parapoder 
+            armar un cubo de rubik (el metodo principiante del 3x3 presenta 7, mientras que el Fridich reducido 
+            presenta 4)
           </div>
         </div>
         <div class="fila-info">
           <button class="toggle">Cantidad de Algoritmos:</button>
           <div class="contenido oculto">
-            Los algoritmos son la base de resolucios de todos (o de al menos mas del %95) los cubos de rubik. Son una
-            serie concreta de movimientos que genera un cambio conocido en ciertas piezas, dejando intacta otras que generalmente son las
-            que queremos evitar (el tipico caso de armo una cara, y cuando quiero armar otra desarmo lo que ya hice). Este apartado 
-            muestra el minimo de algoritmos nescesarios para poder armar el cubo con cierto metodo  
+            Los algoritmos son la base de resolucios de todos (o de al menos mas del %95) los cubos de rubik. 
+            Son una serie concreta de movimientos que genera un cambio conocido en ciertas piezas, dejando intacta 
+            otras que generalmente son las que queremos evitar (el tipico caso de armo una cara, y cuando quiero 
+            armar otra desarmo lo que ya hice). Este apartado muestra el minimo de algoritmos nescesarios para 
+            poder armar el cubo con cierto metodo  
           </div>
         </div>
         <div class="fila-info">
           <button class="toggle">Dificultad promedio de algoritmos:</button>
           <div class="contenido oculto">
             A partir de este punto se empieza a hablar sobre dificultad, aunque este apartado solo dice que 
-            tan dificil son, en promedio, los algoritmos utilizador. Para el calculo de dificultad de un algoritmo se va a utilizar la 
-            formula: 
+            tan dificil son, en promedio, los algoritmos utilizados. Para el calculo de dificultad de un algoritmo 
+            se va a utilizar la formula: 
             <div class="formula">
               $$
               dif_{Algoritmica}=(mov_h + mov_a)\cdot\frac{mov_{mayor}}{mov_{menor}}
               $$
             </div>
-            Donde mov_h, son la cantidad de caras que se mueven en sentido horario, 
-            mov_a la cantidad que se mueve en anti-horario, mov_mayor son la cantidad de veces que se mueve la cara con mas movimiento, 
-            y mov_menor, la cantidad de veces que se mueve la cara con menor movimiento(estos ultimos dos, no es indepentiende de si la 
-            cara se mueve en un sentido o en otro, sino que si se mueve mas veces en un sentido, y menos en otro, la cantidad en un 
-            sentido puede ser usara como el mayor, y el otro como el menor)
+            Donde "
+            <span class="ExplicacionFormulas">$$mov_{h}$$</span>
+            ", son la cantidad de caras que se mueven en sentido horario, "
+            <span class="ExplicacionFormulas">$$mov_{a}$$</span> 
+            " la cantidad que se mueve en anti-horario, " 
+            <span class="ExplicacionFormulas">$$mov_{mayor}$$</span> 
+            " son la cantidad de veces que se mueve la cara con mas movimiento, y "
+            <span class="ExplicacionFormulas">$$mov_{menor}$$</span>
+            ", la cantidad de veces que se mueve la cara con menor movimiento (estos 
+            ultimos dos, no es indepentiende de si la cara se mueve en un sentido o en otro, sino que si se mueve 
+            mas veces en un sentido, y menos en otro, la cantidad en un sentido puede ser usara como el mayor, y el 
+            otro como el menor)
           </div>
         </div>
         <div class="fila-info">
           <button class="toggle">Dificultad Algoritmica total:</button>
           <div class="contenido oculto">
             Aca ya entran detalles como el que puede ser que cuesta mas saberte ciertos algoritmos, y 
-            otros, por ser espejados (es decir, si el original dice mover la derecha arriba, y arriba a la izquierda, el espejo dice, 
-            mover la izquierda arriba, y arriba a la derehca), son mas faciles, con lo que la formula utilizada va a ser:
+            otros, por ser espejados (es decir, si el original dice mover la derecha arriba, y arriba a la 
+            izquierda, el espejo dice, mover la izquierda arriba, y arriba a la derehca), son mas faciles, con lo 
+            que la formula utilizada va a ser:
             <div class="formula">
               $$
                dif_{Algoritmica\ Total}=dif_{alg original}+\frac{dif_{alg espejo}}{2}
               $$
             </div>
-            Donde dif_(alg original) es la suma de las dificultades de los algoritmos originales incluidos los inversos 
-            (que es lo mismo a "deshacer" un algoritmo), y dif_alg_esp es la suma de la dificultad de los algoritmos espejos   
+            Donde "
+            <span class="ExplicacionFormulas">$$dif_{alg original}$$</span>
+            " es la suma de las dificultades de los algoritmos originales incluidos los inversos (que es lo 
+            mismo a "deshacer" un algoritmo), y "
+            <span class="ExplicacionFormulas">$$dif_{alg esp}$$</span> 
+            " es la suma de la dificultad de los 
+            algoritmos espejos   
           </div>
         </div>
         <div class="fila-info">
@@ -134,14 +152,17 @@
                 nivel 3: hay piezas que solo se pueden mover a traves de algoritmos (ej: Puppet V1)
               </li>  
             </ul> 
-            La dificultad se calcula con:
+            La dificultad se calcula como:
             <div class="formula">
               $$
               dif_{bloqueo} = e^{2n} - 1
               $$
             </div>
-            con n siendo el nivel. La dificultad por bloqueo, dependera o afectara de manera directa o indirectamente de la cantidad y 
-            dificultad algoritmica, y esta relacion dependera netamente del tipo de cubo de rubik.
+            Con "
+            <span class="ExplicacionFormulas">$$n$$</span> 
+            " siendo el nivel. La dificultad por bloqueo, dependera o afectara de manera directa o 
+            indirectamente de la cantidad y dificultad algoritmica, y esta relacion dependera netamente del tipo de 
+            cubo de rubik.
           </div>
         </div>
         <div class="fila-info">
@@ -154,40 +175,51 @@
                 nivel 0: no deformacion
               </li>
               <li>
-                nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 3x3)
+                nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 
+                3x3)
               </li>
               <li>
-                nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada pieza, y su tipo (ej: 
+                nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada 
+                pieza, y su tipo (ej: 
                 axis 3x3)
               </li>
               <li>
-                nivel 3: ya se confunden las piezas, no el tipo, pero es dificil diferenciar, por ejemplo, una esquina de otra (ej: ghost
+                nivel 3: ya se confunden las piezas, no el tipo, pero es dificil diferenciar, por ejemplo, una 
+                esquina de otra (ej: ghost
                 3x3, sudoku 3x3) 
               </li>
             </ul> 
-            La dificultad se calcula con 
+            La dificultad se calcula como 
             <div class="formula">
               $$
               dif_{deformacion} = e^{2n} - 1
               $$
             </div>
-            con n siendo el nivel. La dificultad por deformacion, al afectar simplemente la estetica
-            de las piezas, va a sentirse en mayor o menor medida dependiendo de la cantidad de piezas del cubo de rubik.  
+            Con "
+            <span class="ExplicacionFormulas">$$n$$</span> 
+            " siendo el nivel. La dificultad por deformacion, al afectar simplemente la estetica
+            de las piezas, va a sentirse en mayor o menor medida dependiendo de la cantidad de piezas del cubo de 
+            rubik.  
           </div>
         </div>
         <div class="fila-info">
           <button class="toggle">Dificultad por Paridad:</button>
           <div class="contenido oculto">
-            Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una variacion de 
-            otro cubo, como el 4x4 variacion del 3x3, por ejemplo, al llegar a la etapa de la cruz amarilla, en el 3x3 es imposible que 
-            solo esten dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera
-            de los dos casos "impocibles. El calculo de la dificultad es 
+            Es pociblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una 
+            variacion de otro cubo, como el 4x4 variacion del 3x3, por ejemplo, al llegar a la etapa de la cruz 
+            amarilla, en el 3x3 es imposible que solo esten dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o 
+            son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera de los dos casos "imposibles. El calculo 
+            de la dificultad es: 
             <div class="formula">
               $$
               dif_{paridad} = alg_{parid} + cant_{parid}
               $$
             </div>
-            donde alg_parid son los algoritmos que resuelven la paridad, y cant_parid la cantidad de paridades
+            Donde "
+            <span class="ExplicacionFormulas">$$alg_{parid}$$</span> 
+            " son los algoritmos que resuelven la paridad, y "
+            <span class="ExplicacionFormulas">$$cant_{parid}$$</span> 
+            " la cantidad de paridades
           </div>
         </div>
         <div class="fila-info">
@@ -196,7 +228,8 @@
             Dada por 
             <div class="formula">
               $$
-              dif_{Total} =Dificultad_{Algoritmica Total} + dificultad_{bloqueo} + dificultad_{deformacion} + dificultad_{paridad}
+              dif_{Total} =Dificultad_{Algoritmica Total} + dificultad_{bloqueo} + dificultad_{deformacion} + 
+              dificultad_{paridad}
                $$
             </div>
           </div>
@@ -257,12 +290,59 @@
         <div id="detalleHeader"></div>
         <div id="detalleContenido"></div>
         <div id="detalleFooter"></div>
-      </div> 
+      </div>
+    </div>
+    <div class='FondoInfo'>
+<p>
+          La razon de porque utilize las formulas para medir dificultad son:
+      <ul>
+          <li>
+              Para el calculo de la dificultad de un algoritmo: la suma de las caras que giran en un sentido
+              y en otro ya que va a agregar dificultad el hecho de saber si una cara se gira en uno de los 
+              dos sentidos o en ambos, y el hacer esa fraccion, es porque, que un algoritmo sea largo no 
+              nescesariamente lo hace mas dificil, sino el echo de que no "siga algun patron simple", y eso
+              es mas facil de medir al comparar los movimientos de la capa que mas se mueve, contra la que 
+              menos
+          </li>
+          <li>
+              Para el calculo de la dificultad Algoritmica total: Justamente, y como esta aclarado, es mas 
+              diicil saberse un nuevo algoritmo de una misma dificultad, que el espejo de este, ya que una 
+              vez se haya interiorizado un algoritmo, con un poco de practica aprenderse el espejo de este 
+              es mas intuitivo
+          </li>
+          <li>
+              Para el calculo de la dificultad por bloqueo: El crecimiento de esto es muy exponencial, por 
+              eso una formula con "e" elevado a algo. Lo de los niveles es para tener una forma de clasificar
+              , el "2" es para que escale mejor respecto al resto del metodo, y el "- 1" es para que cuando 
+              sea n=0, la ecuacion de 0 en vez de 1. Y puede afectar de manera directa a los algoritmos (crear 
+              nuevos), o de manera indirecta (tener que cambiarlos en la marcha)
+          </li>
+          <li>
+              Para el calculo de la dificultad por deformacion: Exactamente el mismo razonamiento que el 
+              anterior, solo que esta vez, se relacionana con la cantidad de piezas, porque son estas mismas las
+              que se confunden, como en el sudoku, al ser 26 piezas, siendo 20 las que se mueven, son muchas 
+              prueba y error.
+          </li>
+          <li>
+              Para el calculo de la dificultad por paridad: Hice esa suma ya que, si un algoritmo es usado para
+              resolver una paridad, se debe saber como aplicarlo y que hace, lo que aporta dificultad, ademas de 
+              que tambien aporta dificultad el hecho de haber una paridad, por mas simple que sea
+          </li>
+          <li>
+              Para el calculo de la dificultad Total: simplemente la suma de todas las anteriores (menos la de
+              dificultad de un algoritmo)
+           </li>
+      </ul>
+      <p>
+          Aparte de esta aclaracion, me adjunto el merito de crear este metodo de medicion, al que denomnio 
+          "Metodo Gand".
+      </p> 
     </div> 
     <script src="./app.js" defer></script>
     
   </body>    
 </html>
+
 
 
 
