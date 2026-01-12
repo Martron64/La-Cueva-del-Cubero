@@ -113,7 +113,7 @@ function ordenar(data, algoritmos) {
 function asignar(objeto,TIPO,algoritmos){
   let aux;
   if (TIPO=="DifTot"){
-      aux=(dificultadAlgoritmicaTotal(algoritmos)+((e**(objeto.difBlock*2))-1)+((e**(objeto.difDeform*2))-1)+objeto.difParid.alg*objeto.difParid.parid);
+      aux=(dificultadAlgoritmicaTotal(algoritmos)+((e**(objeto.difBlock*2))-1)+((e**(objeto.difDeform*2))-1)+objeto.difParid.alg+objeto.difParid.parid);
     }
     else if(TIPO=="DifAlg"){
       aux=dificultadAlgoritmicaTotal(algoritmos);
@@ -125,7 +125,7 @@ function asignar(objeto,TIPO,algoritmos){
       aux=objeto.difDeform;
     }
     else if(TIPO=="DifParid"){
-      aux=objeto.difParid.alg*objeto.difParid.parid;
+      aux=objeto.difParid.alg+objeto.difParid.parid;
     }
     else if(TIPO=="CantPiezas"){
       aux=objeto.cantPiezas;
@@ -169,10 +169,10 @@ function ImprimirTabla(data,algoritmos){
     fila.insertCell().textContent =Block;
     let Deform=setprecition(((e**(data[x].difDeform*2))-1))+" gands";
     fila.insertCell().textContent =Deform;
-    let Parid=setprecition(data[x].difParid.alg*data[x].difParid.parid)+" gands";
+    let Parid=setprecition(data[x].difParid.alg+data[x].difParid.parid)+" gands";
     fila.insertCell().textContent =Parid;
     let Tot=setprecition((dificultadAlgoritmicaTotal(algoritmos[x])+((e**(data[x].difBlock*2))-1)+((e**(data[x].difDeform*2))-1)+
-                  data[x].difParid.alg*data[x].difParid.parid))+" gands";
+                  data[x].difParid.alg+data[x].difParid.parid))+" gands";
     fila.insertCell().textContent =Tot;
     let celdaBtn = fila.insertCell();
     let btn = document.createElement("button");
@@ -358,10 +358,3 @@ function cargarDescripcion(cuboId) {
       }
     });
 }
-
-
-
-
-
-
-
