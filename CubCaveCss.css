@@ -176,7 +176,8 @@ rgb(121,84,40) ridge
 }
 .ImagenPrincipal{
   border:none;
-  max-width: 100px 100px;
+  width: 100px 100px;
 }
+
 
 
