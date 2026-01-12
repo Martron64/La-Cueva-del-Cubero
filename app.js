@@ -113,7 +113,8 @@ function ordenar(data, algoritmos) {
 function asignar(objeto,TIPO,algoritmos){
   let aux;
   if (TIPO=="DifTot"){
-      aux=(dificultadAlgoritmicaTotal(algoritmos)+((e**(objeto.difBlock*2))-1)+((e**(objeto.difDeform*2))-1)+objeto.difParid.alg+objeto.difParid.parid);
+      aux=(dificultadAlgoritmicaTotal(algoritmos)+((e**(objeto.difBlock*2))-1)+((e**(objeto.difDeform*2))-1)+objeto.difParid.alg+
+           objeto.difParid.parid);
     }
     else if(TIPO=="DifAlg"){
       aux=dificultadAlgoritmicaTotal(algoritmos);
@@ -130,7 +131,7 @@ function asignar(objeto,TIPO,algoritmos){
     else if(TIPO=="CantPiezas"){
       aux=objeto.cantPiezas;
     }
-    else if(TIPO=="CantGriros"){
+    else if(TIPO=="CantGiros"){
       aux=objeto.cantGiros;
     }
     else if(TIPO=="CantAlg"){
@@ -250,9 +251,6 @@ function encontrar(contador,elemento){
 }
 function verCubo(event) {
   let index = Number(event.target.dataset.index);
-  console.log("Cubo:", index);
-  console.log("Cubo:", TablaCubos[index]);
-  console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
   if (cuboActivo === index) {
     cerrarDetalle();
   } 
@@ -261,9 +259,6 @@ function verCubo(event) {
     mostrarSoloFila(index);
     mostrarDetalle(index);
   }
-  console.log("Cubo:", index);
-  console.log("Cubo:", TablaCubos[index]);
-  console.log("Algoritmos:", ConjuntoAlgoritmos[index]);
 }
 function mostrarSoloFila(index) {
   let filas = document.getElementById("tablaCubos").rows;
@@ -358,3 +353,4 @@ function cargarDescripcion(cuboId) {
       }
     });
 }
+
