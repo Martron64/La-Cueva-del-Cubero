@@ -176,8 +176,10 @@ rgb(121,84,40) ridge
 }
 .ImagenPrincipal{
   border:none;
-  height: 10px 10px;
+  width: 30px;
+  height: 20px;
 }
+
 
 
 
