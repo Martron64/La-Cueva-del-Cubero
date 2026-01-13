@@ -21,6 +21,10 @@
    
   {"cubo":"axis","cantPiezas":26,"tipoPiezas":3,"cantGiros":6,"tipoGiros":1,"pasosMin":7,
    "difBlock":0,"difDeform":2,"difParid":{"alg":2,"parid":2},
-   "direccion":"algoritmos/axis.json","descripcion":"descripcion/axis.json"}
+   "direccion":"algoritmos/axis.json","descripcion":"descripcion/axis.json"},
+  
+   {"cubo":"gear 3x3","cantPiezas":38,"tipoPiezas":4,"cantGiros":6,"tipoGiros":1,"pasosMin":5,
+   "difBlock":0,"difDeform":1,"difParid":{"alg":0,"parid":0},
+   "direccion":"algoritmos/gear_3x3.json","descripcion":"descripcion/gear_3x3.json"}
 ]
 
