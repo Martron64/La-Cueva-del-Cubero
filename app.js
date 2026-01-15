@@ -138,7 +138,7 @@ function asignar(objeto,TIPO,algoritmos){
       aux=algoritmos.length;
     }
     else if(TIPO=="Nombre"){
-      aux=objeto.cubo;
+      aux=objeto.cubo.toLowerCase();
     }
   return aux;
 }
@@ -354,6 +354,7 @@ function cargarDescripcion(cuboId) {
       }
     });
 }
+
 
 
 
