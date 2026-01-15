@@ -174,20 +174,21 @@
             y una confucion de otro, se le asigna el nivel mayor).
             <ul>
               <li>
-                nivel 0: no deformacion y no confucion
+                nivel 0: no deformacion ni confucion
               </li>
               <li>
                 nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 
-                3x3), y/o confucion minima (ej: mirror 2x2 simetrico)
+                3x3), y/o la confucion llega solo al punto de al momento de probar una pieza, se puede verificar en el momento si la 
+                pieza va en cierta pocicion, o solo se parece (ej: mirror 2x2 simetrico)
               </li>
               <li>
                 nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada 
-                pieza, y su tipo (ej: axis 3x3), y/o 2 piezas pueden parecerse mucho, pero en la prueba se ve la 
-                diferencia
+                pieza, y su tipo (ej: axis 3x3), y/o 2 piezas pueden parecerse mucho, pero en la prueba de las siguientes piezas 
+                se ve la diferencia
               </li>
               <li>
-                nivel 3: ya se confunden las piezas, no el tipo, pero es dificil diferenciar, por ejemplo, una 
-                esquina de otra (ej: ghost 3x3, sudoku 3x3) 
+                nivel 3: ya se confunden las piezas, y no se diferencia unas de otras hasta ya mas avanzado en la resolucion
+                (ej: ghost 3x3, sudoku 3x3) 
               </li>
             </ul> 
             La dificultad se calcula como 
@@ -374,3 +375,4 @@
     
   </body>    
 </html>
+
