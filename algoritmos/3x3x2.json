@@ -1,0 +1,6 @@
+[
+  {"tipo":"original","pasos":["R","U","R","U'","R"]},
+  {"tipo":"original","pasos":["R","U","R","U'","R","F","U'","F","U","F","U'"]},
+  {"tipo":"original","pasos":["R","U","R","U'","R","U","U","R","U","U","R","U","R","U'","R"]},
+  {"tipo":"original","pasos":["R","U","U","R","U","U","R","U","U"]}
+]

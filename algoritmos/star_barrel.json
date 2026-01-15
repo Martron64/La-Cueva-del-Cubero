@@ -1,0 +1,7 @@
+[
+  {"tipo":"original","pasos":["R","U","R","U","R","U'","U'","R"]},
+  {"tipo":"original","pasos":["U'", "R", "U'", "R", "U", "R", "U", "D'", "R", "U", "R", "U'", "R", "U", "D"]},
+  {"tipo":"original","pasos":["U'", "R", "U", "R", "U'", "R", "U'", "D", "R", "U'", "R", "U", "R", "U", "D'"]},
+  {"tipo":"original","pasos":["R", "U", "D'", "R", "U", "R", "U'","R","D", "R", "U'", "R", "U"]},
+  {"tipo":"original","pasos":["R", "U", "R", "D'", "R", "U", "R","U'", "R", "U'", "D", "R", "U'"]}
+]

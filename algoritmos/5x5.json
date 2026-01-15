@@ -1,0 +1,14 @@
+[
+  {"tipo":"original","pasos":["D'","R'","D","R"]},
+  {"tipo":"espejo","pasos":["D","L","D'","L'"]},
+  {"tipo":"original","pasos":["D","L","D'","L'","D'","F'","D","F"]},
+  {"tipo":"espejo","pasos":["D'","R'","D","R","D","F","D'","F'"]},
+  {"tipo":"original","pasos":["F","R","U","R'","U'","F'"]},
+  {"tipo":"original","pasos":["R'","U'","R","U'","R'","U'","U'","R"]},
+  {"tipo":"original","pasos":["U","R","U'","L'","U","L'","U'","R'"]},
+  {"tipo":"original","pasos":["R'","D'","R","D","R'","D'","R","D","R'","D'","R","D","R'","D'","R","D","R'","D'","R","D","R'","D'","R","D"]},
+  {"tipo":"original","pasos":["r1","F","r2'","F'","r1'","F","r2'","F'"]},
+  {"tipo":"original","pasos":["Ll'","2U","Ll'","2U","2F","2F","Ll'","2F","Rr","2U","Rr'","2U","Ll","Ll"]},
+  {"tipo":"original","pasos":["U","R","U'","L'","U","L'","U'","R'"]},
+  {"tipo":"original","pasos":["Rr","Rr","B","B","U","U","Ll","U","U","Rr","U","U","Rr","U","U","F","F","Rr","F","F","Ll'","B","B","Rr","Rr"]}
+]
