@@ -355,7 +355,7 @@ function cargarDescripcion(cuboId) {
         else if (e.tipo === "titulo") {
           const h = document.createElement("h3");
           h.textContent = e.contenido;
-          contenedor.appendChild(h);
+          cont.appendChild(h);
         }
 
         // 🔹 FÓRMULA CENTRADA
@@ -363,7 +363,7 @@ function cargarDescripcion(cuboId) {
           const div = document.createElement("div");
           div.className = "formula";
           div.innerHTML = `$$${e.contenido}$$`;
-          contenedor.appendChild(div);
+          cont.appendChild(div);
 
           MathJax.typeset(); // ← CLAVE
         }
@@ -373,7 +373,7 @@ function cargarDescripcion(cuboId) {
           const span = document.createElement("span");
           span.className = "ExplicacionFormulas";
           span.innerHTML = `$$${e.contenido}$$`;
-          contenedor.appendChild(span);
+          cont.appendChild(span);
 
           MathJax.typeset();
         }
@@ -388,12 +388,12 @@ function cargarDescripcion(cuboId) {
           ul.appendChild(li);
         });
 
-      contenedor.appendChild(ul);
+        cont.appendChild(ul);
       }
     }
-  
  });
 }
+
 
 
 
