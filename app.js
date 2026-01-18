@@ -351,9 +351,50 @@ function cargarDescripcion(cuboId) {
           p.textContent = e.contenido;
           cont.appendChild(p);
         }
+         // 🔹 TÍTULOS
+        else if (e.tipo === "titulo") {
+          const h = document.createElement("h3");
+          h.textContent = e.contenido;
+          contenedor.appendChild(h);
+        }
+
+        // 🔹 FÓRMULA CENTRADA
+        else if (e.tipo === "formula") {
+          const div = document.createElement("div");
+          div.className = "formula";
+          div.innerHTML = `$$${e.contenido}$$`;
+          contenedor.appendChild(div);
+
+          MathJax.typeset(); // ← CLAVE
+        }
+
+        // 🔹 FÓRMULA INLINE (AZUL)
+        else if (e.tipo === "formulaInline") {
+          const span = document.createElement("span");
+          span.className = "ExplicacionFormulas";
+          span.innerHTML = `$$${e.contenido}$$`;
+          contenedor.appendChild(span);
+
+          MathJax.typeset();
+        }
+
+        // 🔹 LISTA
+        else if (e.tipo === "lista") {
+          const ul = document.createElement("ul");
+
+          e.contenido.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          ul.appendChild(li);
+        });
+
+      contenedor.appendChild(ul);
       }
-    });
+    }
+  }
+ });
 }
+
 
 
 
