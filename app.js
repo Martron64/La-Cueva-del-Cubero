@@ -350,7 +350,7 @@ function cargarDescripcion(cuboId) {
           let p = document.createElement("p");
           p.textContent = e.contenido;
           cont.appendChild(p);
-        }/*
+        }
          // 🔹 TÍTULOS
         else if (e.tipo === "titulo") {
           const h = document.createElement("h3");
@@ -389,11 +389,12 @@ function cargarDescripcion(cuboId) {
         });
 
       contenedor.appendChild(ul);
-      }*/
+      }
     }
   }
  });
 }
+
 
 
 
