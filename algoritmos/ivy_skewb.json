@@ -1,0 +1,8 @@
+[
+  {"tipo":"original","pasos":["DL/2'","u","DL/2","DR/2'","u","DR/2","DL/2'","u","DL/2","DR/2'","u","DR/2"]},
+  {"tipo":"espejo","pasos":["DR/2","u","DR/2'","DL/2","u","DL/2'","DR/2","u","DR/2'","DL/2","u","DL/2'"]},
+  {"tipo":"original","pasos":["DL/2","u","DL/2'","DR/2","u","DR/2'","DL/2","u","DL/2'","DR/2","u","DR/2'"]},
+  {"tipo":"espejo","pasos":["DR/2'","u","DR/2","DL/2'","u","DL/2","DR/2'","u","DR/2","DL/2'","u","DL/2"]},
+  {"tipo":"original","pasos":["UR'","UL","UR","UL'"]},
+  {"tipo":"original","pasos":["UR","UL'","UR'","UL","UR","UL'","UR'","UL","UR","UL'","UR'","UL"]}
+]

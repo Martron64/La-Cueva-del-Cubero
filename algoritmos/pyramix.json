@@ -1,0 +1,8 @@
+[
+  {"tipo":"original","pasos":["L'","U","L"]},
+  {"tipo":"espejo","pasos":["R","U'","R'"]},
+  {"tipo":"original","pasos":["R'","L'","U'","L","U","R"]},
+  {"tipo":"espejo","pasos":["L","R","U","R'","U'","L'"]},
+  {"tipo":"original","pasos":["R'","U","L'","U'","L","U'","R","U"]},
+  {"tipo":"original","pasos":["R","U*","R'","U*","R","U*","R'"]}
+]
