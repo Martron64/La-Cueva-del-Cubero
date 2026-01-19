@@ -106,14 +106,13 @@
             se va a utilizar la formula: 
             <div class="formula">
               $$
-              dif_{Algoritmica}=(mov_h + mov_a)\cdot\frac{mov_{mayor}}{mov_{menor}}
+              dif_{Algoritmica}=tipo_{mov}\cdot\frac{mov_{mayor}}{mov_{menor}}
               $$
             </div>
             Donde "
-            <span class="ExplicacionFormulas">$$mov_{h}$$</span>
-            ", son la cantidad de caras que se mueven en sentido horario, "
-            <span class="ExplicacionFormulas">$$mov_{a}$$</span> 
-            " la cantidad que se mueve en anti-horario, " 
+            <span class="ExplicacionFormulas">$$tipo_{mov}$$</span>
+            ", son la suma de todos los tipos de giro de un algoritmo, distinguiendo un sentido de otro y si el movimiento se aplica
+            mas de una vez (U≠U'≠2U≠U), " 
             <span class="ExplicacionFormulas">$$mov_{mayor}$$</span> 
             " son la cantidad de veces que se mueve la cara con mayor movimiento, y "
             <span class="ExplicacionFormulas">$$mov_{menor}$$</span>
@@ -414,12 +413,11 @@
       </p>
       <ul>
           <li>
-              Para el calculo de la dificultad de un algoritmo: la suma de las caras que giran en un sentido
-              y en otro ya que va a agregar dificultad el hecho de saber si una cara se gira en uno de los 
-              dos sentidos o en ambos, y el hacer esa fraccion, es porque, que un algoritmo sea largo no 
-              nescesariamente lo hace mas dificil, sino el echo de que no "siga algun patron simple", y eso
-              es mas facil de medir al comparar los movimientos de la capa que mas se mueve, contra la que 
-              menos.
+              Para el calculo de la dificultad de un algoritmo: la suma de los tipos de movimientos a agregan dificultad
+              , y la fraccion, es porque, que un algoritmo sea largo no nescesariamente lo hace mas dificil, sino el echo 
+              de que no "siga algun patron simple", y eso es mas facil de medir al comparar los movimientos de la capa que 
+              mas se mueve, contra la que menos, ya que si esta diferencia es grande, es porque pueden ser movimientos que 
+              no sean "repetidos" (como lo puede ser "(R' D' R D)x5").
           </li>
           <li>
               Para el calculo de la dificultad Algoritmica total: Justamente, y como esta aclarado, es mas 
@@ -459,6 +457,7 @@
     
   </body>    
 </html>
+
 
 
 
