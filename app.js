@@ -280,7 +280,7 @@ function mostrarDetalle(i) {
 
   let cubo = TablaCubos[i];
   let algs = ConjuntoAlgoritmos[i];
-
+  console.log(algs);
   // HEADER
   document.getElementById("detalleHeader").innerHTML = `
     <h2>${cubo.cubo}</h2>
@@ -393,6 +393,7 @@ function cargarDescripcion(cuboId) {
     }
  });
 }
+
 
 
 
