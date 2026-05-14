@@ -103,7 +103,7 @@
    "difBlock":0,"difDeform":1,"difParid":{"alg":0,"parid":0},
    "direccion":"algoritmos/redi_barrel.json","descripcion":"descripcion/redi_barrel.json"},
   
-   {"cubo":"skewb","cantPiezas":12,"tipoPiezas":2,"cantGiros":4,"tipoGiros":1,"pasosMin":3,
+   {"cubo":"skewb","cantPiezas":14,"tipoPiezas":2,"cantGiros":4,"tipoGiros":1,"pasosMin":3,
    "difBlock":0,"difDeform":0,"difParid":{"alg":0,"parid":0},
    "direccion":"algoritmos/skewb.json","descripcion":"descripcion/skewb.json"},
   
@@ -115,7 +115,7 @@
    "difBlock":0,"difDeform":0,"difParid":{"alg":0,"parid":0},
    "direccion":"algoritmos/star_barrel.json","descripcion":"descripcion/star_barrel.json"},
   
-   {"cubo":"twisted skewb","cantPiezas":14,"tipoPiezas":2,"cantGiros":4,"tipoGiros":1,"pasosMin":3,
+   {"cubo":"twisted skewb","cantPiezas":14,"tipoPiezas":2,"cantGiros":4,"tipoGiros":1,"pasosMin":4,
    "difBlock":0,"difDeform":1,"difParid":{"alg":1,"parid":1},
    "direccion":"algoritmos/twisted_skewb.json","descripcion":"descripcion/twisted_skewb.json"},
   
