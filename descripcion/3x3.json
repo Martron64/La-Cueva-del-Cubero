@@ -1,3 +1,29 @@
 [
-  {"tipo":"imagen","contenido":"Imagenes/3x3/3x3_1.png"}
+  {"tipo":"imagen","contenido":"Imagenes/3x3/3x3_1.png"},
+   { "tipo": "titulo", "contenido": "Sesgo en la percepción de dificultad" },
+
+  { "tipo": "texto", "contenido": "La dificultad real de un cubo no siempre coincide con la percibida." },
+
+  { "tipo": "lista", "contenido": [
+      "Familiaridad con algoritmos",
+      "Deformación visual",
+      "Experiencia previa del cubero"
+    ]
+  },  
+
+  {"tipo": "formulaInline", "contenido": "formula en la lista" },
+  
+  { "tipo": "texto", "contenido": " lo que sigue en la lista" },
+
+  { "tipo": "lista", "contenido": [
+      "Continuacion de la lista",
+      "2° continuacion de la lista",
+      "Aca capaz que lo hago devuelta"
+    ]
+  },
+
+  {"tipo": "formula", "contenido": "R, U', R', U', R, 2U, R" },
+  { "tipo": "texto", "contenido": "previo " },
+  {"tipo": "formulaInline", "contenido": "balaLALAla" },
+  { "tipo": "texto", "contenido": " posterior" }
 ]
