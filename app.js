@@ -324,9 +324,10 @@ function cargarDescripcion(cuboId) {
 
       // ✔️ borrar contenido previo ANTES de cargar
       cont.innerHTML = "";
-
+      let ultimoFueInline = false;
       let filaImagenes = null;
-
+      let ultimoParrafo = null;
+      let ultimoLi = null;
       for (let e of elementos) {
 
         if (e.tipo === "imagen") {
@@ -340,22 +341,37 @@ function cargarDescripcion(cuboId) {
 
           let img = document.createElement("img");
           img.src = e.contenido;
+          ultimoParrafo = null;
+          ultimoFueInline = false;
           filaImagenes.appendChild(img);
 
         } 
         else if (e.tipo === "texto") {
 
-          // texto corta la fila de imágenes
-          filaImagenes = null;
+          if (ultimoFueInline && ultimoParrafo) {
+            ultimoParrafo.append(e.contenido);
+          }
+          else if (ultimoFueInline && ultimoLi) {
+            ultimoLi.append(e.contenido);
+          }
+          else {
+          
+            // crear nuevo párrafo
+            let p = document.createElement("p");
+            p.textContent = e.contenido;
+            cont.appendChild(p);
 
-          let p = document.createElement("p");
-          p.textContent = e.contenido;
-          cont.appendChild(p);
+            ultimoParrafo = p;
+          }
+
+          ultimoFueInline = false; 
         }
          // 🔹 TÍTULOS
         else if (e.tipo === "titulo") {
           const h = document.createElement("h3");
           h.textContent = e.contenido;
+          ultimoParrafo = null;
+          ultimoFueInline = false;
           cont.appendChild(h);
         }
 
@@ -364,6 +380,8 @@ function cargarDescripcion(cuboId) {
           const div = document.createElement("div");
           div.className = "formula";
           div.innerHTML = `$$${e.contenido}$$`;
+          ultimoParrafo = null;
+          ultimoFueInline = false;
           cont.appendChild(div);
 
           MathJax.typeset(); // ← CLAVE
@@ -373,8 +391,20 @@ function cargarDescripcion(cuboId) {
         else if (e.tipo === "formulaInline") {
           const span = document.createElement("span");
           span.className = "ExplicacionFormulas";
-          span.innerHTML = `$$${e.contenido}$$`;
-          cont.appendChild(span);
+          span.innerHTML = `\\(${e.contenido}\\)`;
+
+          // si existe un párrafo previo, meterlo ahí
+          if (ultimoParrafo) {
+            ultimoParrafo.appendChild(span);
+          }
+          else if (ultimoLi) {
+            ultimoLi.appendChild(span);
+          }
+          else {  
+            cont.appendChild(span);
+          }   
+
+          ultimoFueInline = true;
 
           MathJax.typeset();
         }
@@ -384,27 +414,18 @@ function cargarDescripcion(cuboId) {
           const ul = document.createElement("ul");
 
           e.contenido.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          ul.appendChild(li);
-        });
+            const li = document.createElement("li");
+            li.textContent = item;
 
+            ul.appendChild(li);
+
+            // guardar el último <li>
+             ultimoLi = li;
+          });
+        ultimoParrafo = null;
+        ultimoFueInline = false;
         cont.appendChild(ul);
       }
     }
  });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
