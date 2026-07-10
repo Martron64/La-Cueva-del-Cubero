@@ -27,6 +27,10 @@
    "difBlock":0,"difDeform":1,"difParid":{"alg":0,"parid":0},
    "direccion":"algoritmos/gear_3x3.json","descripcion":"descripcion/gear_3x3.json"},
   
+   {"cubo":"gear 2x2","cantPiezas":8,"tipoPiezas":2,"cantGiros":7,"tipoGiros":2,"pasosMin":3,
+   "difBlock":0,"difDeform":1,"difParid":{"alg":1,"parid":1},
+   "direccion":"algoritmos/gear_2x2.json","descripcion":"descripcion/gear_2x2.json"},
+  
    {"cubo":"FTO","cantPiezas":42,"tipoPiezas":3,"cantGiros":8,"tipoGiros":1,"pasosMin":10,
    "difBlock":0,"difDeform":0,"difParid":{"alg":0,"parid":0},
    "direccion":"algoritmos/FTO.json","descripcion":"descripcion/FTO.json"},
