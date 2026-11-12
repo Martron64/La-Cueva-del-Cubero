@@ -290,6 +290,9 @@ function obtenerCantidadParidades(cubo) {
 // ======================================================
 
 function ImprimirTabla(data, algoritmos) {
+    document.getElementById("buscador").disabled = false;
+    document.getElementById("Tipo").disabled = false;
+    document.getElementById("btnOrden").disabled = false;
 
   // Guardamos los datos que corresponden a las filas visibles.
   // Los botones de "Ver cubo" van a utilizar estos arrays.
