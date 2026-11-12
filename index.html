@@ -21,444 +21,589 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTHPLK3G"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class='FondoInfo'>
-      <img src="ImagenPagina.png" class='ImagenPrincipal'>
-      <h1 class='Titulo'>
-        La Cueva Del Cubero
-      </h1>
-      <h2>
-        Como funciona el sistema de dificultad?
-      </h2>
-      <h3>
-        La dificultad de un cubo de rubik no es medible con un simple "este me costo mas que este", contando la 
-        cantidad de piezas o giros, o de una forma lineal, varía dependiendo ciertos parámetros, independientes 
-        unos de otros.
-      </h3>
-      <h3>
-        La tabla presentada intenta resolver dicho inconveniente mostrando detalles del cubo como:
-      </h3>
-      <div class="info-cubo">
-        <div class="fila-info">
-          <button class="toggle">Nombre:</button>
-          <div class="contenido oculto">
-            Simplemente el nombre del cubo, aunque algunos tendran un agregado como lo puede ser "(fd_red)", o 
-            "(fd_com)", que significan Fridich reducido y Fridich completo. Esto significa que la dificultad a 
-            mostrar no es la del cubo en si, sino la de un método de resolución mas difícil que busca resolverlo 
-            mas rápido y en menos pasos. De no tener ningun añadido, es el método "principiante".  
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Cantidad de piezas:</button>
-          <div class="contenido oculto">
-            La cantidad de piezas del cubo de rubik.  
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Tipo de piezas:</button>
-          <div class="contenido oculto">
-            Para las personas que piensen que, en el cubo de rubik clasico, cada cuadrado de color es una pieza 
-            unica, que puede ser cambiada por cualquier otra, este apartado puede no tener sentido para ellos pero; por 
-            ejemplo, el cubo de rubik 3x3, no presenta 54 piezas distintas (9 piezas por 6 caras), sino que 
-            presenta 26, porque son 6 centros (piezas de un color), 12 aristas (piezas de 12 colores) y 8 esquinas 
-            (piezas de 3 colores). Con lo que este apartado sirve para saber justamente eso; en cuantos conjuntos 
-            se dividen las piezas
-          </div>
-        </div>
-        <div class="fila-info">
-           <button class="toggle">Cantidad de giros:</button>
-           <div class="contenido oculto">
-             La cantidad de centros de giro que presenta el cubo de rubik
-           </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Tipos de Giros:</button>
-          <div class="contenido oculto">
-            Para una persona que nunca haya visto una variación o modificación, existen cubos con mas de un 
-            tipo de giro. El 3x3 tiene solo 1, pero cubos como el square-one presentan 2 (2 de tipo centro y 2 de 
-            tipo de movimiento de cara)  
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Pasos minimos:</button>
-          <div class="contenido oculto">
-            Esto depende del metodo utilizado, y determina la cantidad de pasos minimos que presenta para poder 
-            armar un cubo de rubik (el método principiante del 3x3 presenta 7, mientras que el Fridich reducido 
-            presenta 4)
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Cantidad de Algoritmos:</button>
-          <div class="contenido oculto">
-            Los algoritmos son la base de resolución de todos los cubos de rubik. Este apartado muestra el minimo de 
-            algoritmos nescesarios para poder armar el cubo con cierto metodo  
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Dificultad promedio de algoritmos:</button>
-          <div class="contenido oculto">
-            A partir de este punto se empieza a hablar sobre dificultad, aunque este apartado solo dice que 
-            tan dificil son, en promedio, los algoritmos utilizados. Para el calculo de dificultad de un algoritmo 
-            se va a utilizar la formula: 
-            <div class="formula">
-              $$
-              dif_{Algoritmica}=tipo_{mov}\cdot\frac{mov_{mayor}}{mov_{menor}}
-              $$
-            </div>
-            Donde "
-            <span class="ExplicacionFormulas">$$tipo_{mov}$$</span>
-            ", son la suma de todos los tipos de giro de un algoritmo, distinguiendo un sentido de otro y si el movimiento se aplica
-            mas de una vez (U≠U'≠2U≠U), " 
-            <span class="ExplicacionFormulas">$$mov_{mayor}$$</span> 
-            " es la cantidad de veces que se repite el movimiento mas usado, y "
-            <span class="ExplicacionFormulas">$$mov_{menor}$$</span>
-            ", es la cantidad de veces que se repite el movimiento menos usado
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Dificultad Algoritmica total:</button>
-          <div class="contenido oculto">
-            Aca ya entran detalles como el que puede ser que cuesta mas saberte ciertos algoritmos, y 
-            otros, por ser espejados (es decir, si el original dice mover la derecha arriba, y arriba a la 
-            izquierda, el espejo dice, mover la izquierda arriba, y arriba a la derehca), son mas faciles, con lo 
-            que la formula utilizada va a ser:
-            <div class="formula">
-              $$
-               dif_{Algoritmica\ Total}=dif_{alg original}+\frac{dif_{alg espejo}}{2}
-              $$
-            </div>
-            Donde "
-            <span class="ExplicacionFormulas">$$dif_{alg original}$$</span>
-            " es la suma de las dificultades de los algoritmos originales incluidos sus inversos (que es lo 
-            mismo a "deshacer" un algoritmo), y "
-            <span class="ExplicacionFormulas">$$dif_{alg esp}$$</span> 
-            " es la suma de la dificultad de los algoritmos espejo   
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Dificultad por Bloqueo:</button>
-          <div class="contenido oculto">
-            Algunos cubos de rubik pueden llegar a presentar bloqueos, que pueden ser 1 de 4 niveles.
-            <ul>
-              <li> 
-                nivel 0: no bloqueo
-              </li>
-              <li>
-                nivel 1: hay que "alinear" el cubo para girar (ej: pentacle, polaris)
-              </li>
-              <li>
-                nivel 2: Alguna piezas se bloquean en ciertos casos (ej:Puppet V2)
-              </li>
-              <li>
-                nivel 3: hay piezas que solo se pueden mover a traves de algoritmos (ej: Puppet V1)
-              </li>  
-            </ul> 
-            La dificultad se calcula como:
-            <div class="formula">
-              $$
-              dif_{bloqueo} = e^{2n} - 1
-              $$
-            </div>
-            Con "
-            <span class="ExplicacionFormulas">$$n$$</span> 
-            " siendo el nivel.
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Dificultad por Deformacion:</button>
-          <div class="contenido oculto">
-            Hay cubos de rubik que presentan deformaciones, o que presentan siertos patrones en sus piezas
-            que hacen que se confundan con otras aumentando su dificultad,  
-            donde al igual que el anterior, hay de 4 niveles (si un cubo presenta una deformacion de un nivel
-            y una confucion de otro, se le asigna el nivel mayor).
-            <ul>
-              <li>
-                nivel 0: no deformacion ni confucion
-              </li>
-              <li>
-                nivel 1: deformacion minima, pero sigue manteniendo en cierto aspecto la forma original (ej: ficher 
-                3x3), y/o la confucion llega solo al punto de al momento de probar una pieza, se puede verificar en el momento si la 
-                pieza va en cierta pocicion, o solo se parece (ej: mirror 2x2 simetrico)
-              </li>
-              <li>
-                nivel 2: ya deja de tener su forma original, pero es medianamente facil determinar cuales son cada 
-                pieza, y su tipo (ej: axis 3x3), y/o 2 piezas pueden parecerse mucho, pero en la prueba de las siguientes piezas 
-                se ve la diferencia
-              </li>
-              <li>
-                nivel 3: ya se confunden las piezas, y no se diferencia unas de otras hasta ya mas avanzado en la resolucion
-                (ej: ghost 3x3, sudoku 3x3) 
-              </li>
-            </ul> 
-            La dificultad se calcula como 
-            <div class="formula">
-              $$
-              dif_{deformacion} = e^{2n} - 1
-              $$
-            </div>
-            Con "
-            <span class="ExplicacionFormulas">$$n$$</span> 
-            " siendo el nivel.
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Dificultad por Paridad:</button>
-          <div class="contenido oculto">
-            Es posiblemente el apartado que menos dificultad otorga al cubo de rubik, y ocurre cuando es una 
-            variación de otro cubo, Como el 4x4 variacion del 3x3. Un ejemplo, es que al llegar a la etapa de la cruz 
-            amarilla, en el 3x3 es imposible que solo esten dadas "vuelta" solo 1 o 3 aristas, o son ninguna, o 
-            son 2, o son 4, sin embargo, el 4x4 puede presentar cualquiera de los dos casos "imposibles. El calculo 
-            de la dificultad es: 
-            <div class="formula">
-              $$
-              dif_{paridad} = alg_{parid} + cant_{parid}
-              $$
-            </div>
-            Donde "
-            <span class="ExplicacionFormulas">$$alg_{parid}$$</span> 
-            " son los algoritmos que resuelven la paridad, y "
-            <span class="ExplicacionFormulas">$$cant_{parid}$$</span> 
-            " la cantidad de paridades
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Dificultad total:</button>
-          <div class="contenido oculto">
-            Dada por 
-            <div class="formula">
-              $$
-              dif_{Total} =Dificultad_{Algoritmica Total} + dificultad_{bloqueo} + dificultad_{deformacion} + 
-              dificultad_{paridad}
-               $$
-            </div>
-          </div>
-        </div>
-        <h2>
-          Algortimos y notacion:
-        </h2>
-        <div class="fila-info">
-          <button class="toggle">Que es un algoritmo?</button>
-          <div class="contenido oculto">
-            Un algoritmo es una secuencia de pasos, destinada a resolver ciertos problemas, como lo pueden ser
-            la receta de una torta, el manual de uso de algun aparato electronico, etc. En el mundo de los cubos
-            de rubik, un algoritmo es una secuencia de movimientos que generan un cambio controlado en un numero
-            limitado y controlado de piezas, movimientos que pueden variar entre intercambiar de lugar 2 o mas piezas
-            o rotar sobre si mismas 1 o mas piezas, o incluso ambos movimientos. Los movimientos del algoritmo estan
-            denominados por letras, que segun la notacion, determinan que cara mover, y en que sentido. Por ejemplo
-            "<span class="ExplicacionFormulas">$$R , U , R' , U , R , 2U , R'$$</span>" , un algoritmo usado en el motodo fridich 
-            reducido del 3x3 para hacer la ultima cara.
-          </div>
-        </div>
-        <div class="fila-info">
-          <button class="toggle">Que es la notacion?</button>
-            <div class="contenido oculto">
-              La notacion nos aclara por cada cubo, que cara, y en que direccion gira, esto ultimo definiendolo con una apostrofe ( ' ), 
-              que significa que se mueve al revez. Generalmente las letras se asignan por su traduccion del ingles. Por ejemplo, es en el 
-              3x3 clasico, donde la letra 
-              <span class="ExplicacionFormulas">$$U$$</span>
-              (up) nos dice que debemos mover la cara de arriba en sentido horario la 
-              <span class="ExplicacionFormulas">$$U'$$</span>
-              (se lee "U prima") nos dice que el movimiento debe ser en sentido antihorario, la letra 
-              <span class="ExplicacionFormulas">$$R$$</span>
-              (right) es de derecha, 
-              <span class="ExplicacionFormulas">$$L$$</span>
-              (left) es la izquierda, 
-              <span class="ExplicacionFormulas">$$F$$</span>
-              (front) es la cara de en frente, 
-              <span class="ExplicacionFormulas">$$B$$</span>
-              (back) la cara de atras y 
-              <span class="ExplicacionFormulas">$$D$$</span>
-              (down) la cara de abajo, las letras 
-              <span class="ExplicacionFormulas">$$M$$</span>
-              , 
-              <span class="ExplicacionFormulas">$$E$$</span>
-              , y 
-              <span class="ExplicacionFormulas">$$S$$</span>
-              , estan reservadas para el movimiento de las caras del medio, y por ultimo 
-              <span class="ExplicacionFormulas">$$X$$</span>
-              , 
-              <span class="ExplicacionFormulas">$$Y$$</span>
-              y 
-              <span class="ExplicacionFormulas">$$Z$$</span>
-              es mover el cubo completo. Pero esta notacion es del 3x3, otros cubos pueden tener la misma u otra completamente diferente
-              como en el FTO, donde se agregan los movimientos 
-              <span class="ExplicacionFormulas">$$BR$$</span>
-              (back right) y 
-              <span class="ExplicacionFormulas">$$BL$$</span>
-              (back left), ademas de que se reemplaza 
-              <span class="ExplicacionFormulas">$$M$$</span>
-              , 
-              <span class="ExplicacionFormulas">$$E$$</span>
-              , y 
-              <span class="ExplicacionFormulas">$$S$$</span>
-              por 
-              <span class="ExplicacionFormulas">$$w$$</span>
-              y 
-              <span class="ExplicacionFormulas">$$s$$</span>
-              , pero tienen que estar acompañado de al menos otra letra, generalmente 
-              <span class="ExplicacionFormulas">$$R$$</span>
-              , 
-              <span class="ExplicacionFormulas">$$L$$</span>
-              , 
-              <span class="ExplicacionFormulas">$$F$$</span>
-              o 
-              <span class="ExplicacionFormulas">$$U$$</span>
-              , para la 
-              <span class="ExplicacionFormulas">$$s$$</span>
-              , ya que, 
-              <span class="ExplicacionFormulas">$$Rs$$</span>
-              es lo mismo que 
-              <span class="ExplicacionFormulas">$$Bls'$$</span>
-              , y con cualquiera de las 8 para la 
-              <span class="ExplicacionFormulas">$$w$$</span> 
-            </div>
-          </div>
-        </div>
-        <h2>
-          Sesgo de percepcion de dificultad
-        </h2>
-        
-        <div class="fila-info">
-           <button class="toggle">A que se refiere?</button>
-           <div class="contenido oculto">
-             Es normal que ciertos cubos puedan parecer mas o menos dificil para algunas personas respecto de lo que defina la tabla. 
-             Es decir, un cubo de dificultad, por ejemplo, 70 gands, se siente mas dificil que uno de 80 gands. y esto puede deberse 
-             por 2 motivos.
-             <ul>
-               <li>
-                 El primero: Puedes tener mucha mas afinidad, o resultarte mas facil, por ejemplo, resolver un cubo con mucha 
-                 deformacion a uno que se bloquea, con lo que uno con deformacion 3 (que son 402.43 gands), puede no costar tanto como 
-                 uno de nivel de bloque 2, que son 53.6 gands. Con lo que, primero, depende directamente de que le es mas facil 
-                 y dificil de resolver a la persona que este armando cubos
-               </li>
-               <li>
-                 El segundo: Ya haber armado cubos parecidos. Si ya sabes armas un 3x3, armar un 4x4 va a ser mas dicil que un 3x3, pero
-                 no se va a sentir tanta la diferencia, si primero se comienza por un 4x4. Esto debido a que, la estrategia del 4x4 es
-                 llevarlo a un 3x3, con lo que la unica dificultad es ese faltante. Incluso esto mismo pasa sabiendo armar el 3x3 y 
-                 queriendo aprender a armar el megamix, el pyramix, o cubos que se deformen como el axis, el mirror, etc. Ya que en el 
-                 caso del megamix, aunque tenga otra forma, si una persona ya razonó como funciona y se arma el 3x3, ya intuye como se 
-                 arma el megamix, y solo se le dificulta la ultima capa, donde los algoritmos cambian ligeramente, pero no mucho. Y cubos
-                 como el Axis o el Mirror, lo mismo, solo tienes que lograr verlo como un 3x3, y los algoritmos se simplifican. Y esto
-                 mismo tambien pasa al intetnar armar cuboides, (si ya sabes armar el star barrel, si te sera mas facil cubos como el
-                 square-one)
-               </li>
-             </ul>
-           </div>
-        </div>
-      </div>
-    </div>  
-    <div class='CUBOS'>
-      <div class='MargenTitle2'>
-        <h2 class='SubTitle2'>
-          Tabla de Dificultad
-        </h2>
-      </div>
-      <div class="filtros">
-        <label>
-          Buscar cubo:
-          <input type="text" id="buscador" placeholder="3x3, 4x4, mirror...">
-        </label>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTHPLK3G"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-        <label>
-          Ordenar:
-          <select id="Tipo">
-            <option value="DifTot">Dificultad total</option>
-            <option value="DifAlg">Dificultad algoritmica</option>
-            <option value="DifBlock">Dificultad por bloqueo</option>
-            <option value="DifDeform">Dificultad por deformacion</option>
-            <option value="DifParid">Dificultad por paridad</option>
-            <option value="CantPiezas">Cantidad de piezas</option>
-            <option value="CantGiros">Cantidad de giros</option>
-            <option value="CantAlg">Cantidad de algoritmos</option>
-            <option value="Nombre">Nombre</option>
-          </select>
-        </label>
-        <button id="btnOrden" type="button">Descendente-⬇</button>
+  <div class="FondoInfo">
+    <img src="ImagenPagina.png" class="ImagenPrincipal" alt="La Cueva Del Cubero">
+
+    <h1 class="Titulo">La Cueva Del Cubero</h1>
+
+    <p class="versionMetodo">Sistema de medición: Método Gand — Versión V2</p>
+
+    <h2>¿Cómo funciona el sistema de dificultad?</h2>
+
+    <h3>
+      La dificultad de un cubo de Rubik no es medible con un simple
+      «este me costó más que este», contando la cantidad de piezas o giros,
+      o de una forma lineal. Varía dependiendo de ciertos parámetros,
+      independientes unos de otros.
+    </h3>
+
+    <h3>
+      La tabla presentada intenta resolver dicho inconveniente mostrando
+      detalles del cubo como:
+    </h3>
+
+    <div class="info-cubo">
+
+      <div class="fila-info">
+        <button class="toggle">Nombre:</button>
+        <div class="contenido oculto">
+          Simplemente el nombre del cubo, aunque algunos tendrán un agregado
+          como lo puede ser «(fd_red)» o «(fd_com)», que significan
+          Friedrich reducido y Friedrich completo. Esto significa que la
+          dificultad a mostrar no es la del cubo en sí, sino la de un método
+          de resolución más difícil que busca resolverlo más rápido y en
+          menos pasos. De no tener ningún añadido, es el método
+          «principiante».
+        </div>
       </div>
-      <div id="contenedorTabla">
-        <table id="tablaCubos">
+
+      <div class="fila-info">
+        <button class="toggle">Cantidad de piezas:</button>
+        <div class="contenido oculto">
+          La cantidad de piezas del cubo de Rubik.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Tipo de piezas:</button>
+        <div class="contenido oculto">
+          Para las personas que piensen que, en el cubo de Rubik clásico,
+          cada cuadrado de color es una pieza única que puede ser cambiada
+          por cualquier otra, este apartado puede no tener sentido para
+          ellos. Por ejemplo, el cubo de Rubik 3x3 no presenta 54 piezas
+          distintas (9 piezas por 6 caras), sino que presenta 26, porque
+          son 6 centros (piezas de un color), 12 aristas (piezas de dos
+          colores) y 8 esquinas (piezas de tres colores). Este apartado
+          sirve para saber en cuántos conjuntos se dividen las piezas.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Cantidad de giros:</button>
+        <div class="contenido oculto">
+          La cantidad de centros de giro que presenta el cubo de Rubik.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Tipos de giros:</button>
+        <div class="contenido oculto">
+          Para una persona que nunca haya visto una variación o modificación,
+          existen cubos con más de un tipo de giro. El 3x3 tiene solo uno,
+          pero cubos como el Square-1 presentan dos: giros de tipo centro y
+          movimientos de tipo cara.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Pasos mínimos:</button>
+        <div class="contenido oculto">
+          Esto depende del método utilizado y determina la cantidad de pasos
+          mínimos que presenta para poder armar un cubo de Rubik. El método
+          principiante del 3x3 presenta 7, mientras que el Friedrich reducido
+          presenta 4.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Cantidad de algoritmos:</button>
+        <div class="contenido oculto">
+          Los algoritmos son la base de resolución de todos los cubos de
+          Rubik. Este apartado muestra el mínimo de algoritmos necesarios
+          para poder armar el cubo con cierto método.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Dificultad algorítmica individual y promedio:</button>
+        <div class="contenido oculto">
+          Para calcular la dificultad de cada algoritmo por separado se
+          utiliza la siguiente fórmula:
+
+          <div class="formula">
+            $$
+            D_{\text{alg}} =
+            L\cdot\frac{Conteo_{\text{mayor}}}{Conteo_{\text{menor}}}
+            $$
+          </div>
+
+          Donde:
+
+          <ul>
+            <li>
+              <span class="ExplicacionFormulas">\(L\)</span>
+              es la cantidad de tipos de movimiento distintos presentes
+              en el algoritmo, distinguiendo un sentido de otro y también
+              si el movimiento se aplica más de una vez
+              (\(U\neq U'\neq 2U\)).
+            </li>
+            <li>
+              <span class="ExplicacionFormulas">\(Conteo_{\text{mayor}}\)</span>
+              es la cantidad de veces que se repite el movimiento más usado.
+            </li>
+            <li>
+              <span class="ExplicacionFormulas">\(Conteo_{\text{menor}}\)</span>
+              es la cantidad de veces que se repite el movimiento menos usado.
+            </li>
+          </ul>
+
+          Una vez calculada la dificultad individual de cada algoritmo,
+          se obtiene la **dificultad algorítmica promedio**
+          (\(D_{A,\text{prom}}\)) haciendo el promedio de las dificultades
+          de todos los algoritmos. Todos se cuentan por igual: originales,
+          inversos, espejos e inversos de espejos.
+
+          <div class="formula">
+            $$
+            D_{A,\text{prom}}^* =
+            \max\left(1,D_{A,\text{prom}}\right)
+            $$
+          </div>
+
+          El asterisco indica que se aplica un piso de 1: si el promedio
+          resulta menor que 1, se utiliza 1.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Dificultad algorítmica total:</button>
+        <div class="contenido oculto">
+          No todos los algoritmos aportan lo mismo. Los algoritmos espejo
+          suelen ser más fáciles de aprender una vez que ya se conoce el
+          original. Por eso, los originales y sus inversos se cuentan con
+          peso 1, mientras que los espejos y sus inversos se cuentan con
+          peso \(1/2\).
+
+          <div class="formula">
+            $$
+            D_A =
+            \sum D_{\text{originales}}
+            + \frac{\sum D_{\text{espejos}}}{2}
+            $$
+          </div>
+
+          En esta fórmula, las sumas representan las dificultades
+          individuales de los algoritmos de cada grupo. Los inversos de
+          los algoritmos originales se incluyen en el primer grupo, y los
+          inversos de los espejos, en el segundo.
+
+          Para utilizar este valor en el cálculo final se aplica un piso
+          de 1:
+
+          <div class="formula">
+            $$
+            D_A^* = \max(1,D_A)
+            $$
+          </div>
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Nivel de bloqueo:</button>
+        <div class="contenido oculto">
+          Algunos cubos de Rubik pueden llegar a presentar bloqueos, que
+          pueden ser de uno de cuatro niveles:
+
+          <ul>
+            <li>Nivel 0: no hay bloqueo.</li>
+            <li>
+              Nivel 1: hay que «alinear» el cubo para girar
+              (ej.: Pentacle, Polaris).
+            </li>
+            <li>
+              Nivel 2: algunas piezas se bloquean en ciertos casos
+              (ej.: Puppet V2).
+            </li>
+            <li>
+              Nivel 3: hay piezas que solo se pueden mover a través de
+              algoritmos (ej.: Puppet V1).
+            </li>
+          </ul>
+
+          El nivel de bloqueo se utiliza como un factor multiplicador
+          de la dificultad algorítmica total:
+
+          <div class="formula">
+            $$
+            A_B = e^{n_B}
+            $$
+          </div>
+
+          Donde \(n_B\) es el nivel de bloqueo asignado al cubo.
+          Si no hay bloqueo, el factor vale 1.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Nivel de deformación:</button>
+        <div class="contenido oculto">
+          Hay cubos de Rubik que presentan deformaciones o patrones en sus
+          piezas que hacen que se confundan unas con otras. Se utilizan
+          cuatro niveles. Si un cubo presenta una deformación de un nivel
+          y una confusión de otro, se le asigna el nivel mayor.
+
+          <ul>
+            <li>
+              Nivel 0: no hay deformación ni confusión.
+            </li>
+            <li>
+              Nivel 1: deformación mínima, pero sigue manteniendo en cierto
+              aspecto la forma original (ej.: Fisher 3x3); y/o la confusión
+              llega solo al punto de que, al probar una pieza, se puede
+              verificar en el momento si va en cierta posición o si solo
+              se parece (ej.: Mirror 2x2 simétrico).
+            </li>
+            <li>
+              Nivel 2: deja de tener su forma original, pero es medianamente
+              fácil determinar cuáles son las piezas y su tipo
+              (ej.: Axis 3x3); y/o dos piezas pueden parecerse mucho, pero
+              al probar las siguientes piezas se ve la diferencia.
+            </li>
+            <li>
+              Nivel 3: las piezas se confunden y no se diferencian unas de
+              otras hasta una etapa más avanzada de la resolución
+              (ej.: Ghost 3x3, Sudoku 3x3).
+            </li>
+          </ul>
+
+          El nivel de deformación se utiliza como otro factor multiplicador:
+
+          <div class="formula">
+            $$
+            A_D = e^{n_D}
+            $$
+          </div>
+
+          Donde \(n_D\) es el nivel de deformación asignado al cubo.
+          Si no hay deformación ni confusión, el factor vale 1.
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Cantidad de paridades:</button>
+        <div class="contenido oculto">
+          Es posiblemente el apartado que menos aporta a la dificultad
+          total del cubo de Rubik. Ocurre cuando se trata de una variación
+          de otro cubo, como el 4x4 respecto del 3x3.
+
+          Por ejemplo, al llegar a la etapa de la cruz amarilla, en el 3x3
+          es imposible que estén dadas vuelta solamente 1 o 3 aristas:
+          pueden estar dadas vuelta ninguna, 2 o 4. Sin embargo, el 4x4
+          puede presentar cualquiera de los dos casos que son imposibles
+          en el 3x3.
+
+          En el cálculo final interviene únicamente la cantidad de paridades
+          (\(N_P\)).
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <button class="toggle">Dificultad total:</button>
+        <div class="contenido oculto">
+          La fórmula utilizada en la Versión V2 del Método Gand es:
+
+          <div class="formula">
+            $$
+            D_T =
+            D_A^*\cdot A_B\cdot A_D
+            + N_P\cdot D_{A,\text{prom}}^*
+            $$
+          </div>
+
+          Donde:
+
+          <ul>
+            <li>
+              \(D_A^*\) es la dificultad algorítmica total, con un piso de 1.
+            </li>
+            <li>
+              \(A_B=e^{n_B}\) es el factor multiplicador correspondiente
+              al nivel de bloqueo.
+            </li>
+            <li>
+              \(A_D=e^{n_D}\) es el factor multiplicador correspondiente
+              al nivel de deformación.
+            </li>
+            <li>
+              \(N_P\) es la cantidad de paridades.
+            </li>
+            <li>
+              \(D_{A,\text{prom}}^*\) es la dificultad algorítmica promedio,
+              también con un piso de 1.
+            </li>
+          </ul>
+
+          La contribución de las paridades se suma como un término separado:
+          no se multiplica por los factores de bloqueo y deformación.
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Algoritmos y notación:</h2>
+
+    <div class="fila-info">
+      <button class="toggle">¿Qué es un algoritmo?</button>
+      <div class="contenido oculto">
+        Un algoritmo es una secuencia de pasos destinada a resolver ciertos
+        problemas, como lo pueden ser la receta de una torta o el manual de
+        uso de algún aparato electrónico. En el mundo de los cubos de Rubik,
+        un algoritmo es una secuencia de movimientos que generan un cambio
+        controlado en un número limitado de piezas. Estos movimientos pueden
+        intercambiar de lugar dos o más piezas, rotar sobre sí mismas una o
+        más piezas, o incluso ambas cosas.
+
+        Los movimientos del algoritmo están denominados por letras que,
+        según la notación, determinan qué cara mover y en qué sentido.
+        Por ejemplo:
+        <span class="ExplicacionFormulas">\(R,\ U,\ R',\ U,\ R,\ 2U,\ R'\)</span>,
+        un algoritmo usado en el método Friedrich reducido del 3x3 para
+        resolver la última cara.
+      </div>
+    </div>
+
+    <div class="fila-info">
+      <button class="toggle">¿Qué es la notación?</button>
+      <div class="contenido oculto">
+        La notación nos aclara, para cada cubo, qué cara gira y en qué
+        dirección. Esto último se define con una apostrofe ('),
+        que significa que se mueve al revés. Generalmente, las letras se
+        asignan por su traducción del inglés.
+
+        Por ejemplo, en el 3x3 clásico, la letra
+        <span class="ExplicacionFormulas">\(U\)</span> (up) indica que
+        debemos mover la cara de arriba en sentido horario, mientras que
+        <span class="ExplicacionFormulas">\(U'\)</span> (se lee «U prima»)
+        indica que el movimiento debe ser en sentido antihorario.
+
+        La letra <span class="ExplicacionFormulas">\(R\)</span> (right)
+        es la derecha,
+        <span class="ExplicacionFormulas">\(L\)</span> (left) es la
+        izquierda,
+        <span class="ExplicacionFormulas">\(F\)</span> (front) es la cara
+        de enfrente,
+        <span class="ExplicacionFormulas">\(B\)</span> (back) es la cara
+        de atrás y
+        <span class="ExplicacionFormulas">\(D\)</span> (down) es la cara
+        de abajo.
+
+        Las letras <span class="ExplicacionFormulas">\(M\)</span>,
+        <span class="ExplicacionFormulas">\(E\)</span> y
+        <span class="ExplicacionFormulas">\(S\)</span> están reservadas
+        para el movimiento de las capas del medio. Por último,
+        <span class="ExplicacionFormulas">\(X\)</span>,
+        <span class="ExplicacionFormulas">\(Y\)</span> y
+        <span class="ExplicacionFormulas">\(Z\)</span> representan mover
+        el cubo completo.
+
+        Esta notación corresponde al 3x3; otros cubos pueden tener la misma
+        u otra completamente diferente. Por ejemplo, en el FTO se agregan
+        los movimientos <span class="ExplicacionFormulas">\(BR\)</span>
+        (back right) y <span class="ExplicacionFormulas">\(BL\)</span>
+        (back left). Además, se reemplazan
+        <span class="ExplicacionFormulas">\(M\)</span>,
+        <span class="ExplicacionFormulas">\(E\)</span> y
+        <span class="ExplicacionFormulas">\(S\)</span> por
+        <span class="ExplicacionFormulas">\(w\)</span> y
+        <span class="ExplicacionFormulas">\(s\)</span>, que deben estar
+        acompañadas de al menos otra letra, generalmente
+        <span class="ExplicacionFormulas">\(R\)</span>,
+        <span class="ExplicacionFormulas">\(L\)</span>,
+        <span class="ExplicacionFormulas">\(F\)</span> o
+        <span class="ExplicacionFormulas">\(U\)</span> para la
+        <span class="ExplicacionFormulas">\(s\)</span>, ya que
+        <span class="ExplicacionFormulas">\(Rs\)</span> es lo mismo que
+        <span class="ExplicacionFormulas">\(Bls'\)</span>. Para la
+        <span class="ExplicacionFormulas">\(w\)</span> se puede acompañar
+        de cualquiera de las ocho caras.
+      </div>
+    </div>
+
+    <h2>Sesgo de percepción de dificultad</h2>
+
+    <div class="fila-info">
+      <button class="toggle">¿A qué se refiere?</button>
+      <div class="contenido oculto">
+        Es normal que ciertos cubos puedan parecer más o menos difíciles
+        para algunas personas respecto de lo que defina la tabla. Es decir,
+        un cubo con una dificultad de, por ejemplo, 70 gands puede sentirse
+        más difícil que uno de 80 gands. Esto puede deberse a dos motivos:
+
+        <ul>
+          <li>
+            El primero: puedes tener mucha más afinidad, o resultarte más
+            fácil, por ejemplo, resolver un cubo con mucha deformación que
+            uno que se bloquea. Por eso, uno con deformación de nivel 3
+            (que aporta un factor de aproximadamente 20,09) puede no costar
+            tanto como uno con bloqueo de nivel 2. Depende directamente de
+            qué le resulta más fácil o difícil de resolver a la persona que
+            está armando cubos.
+          </li>
+          <li>
+            El segundo: ya haber armado cubos parecidos. Si ya sabes armar
+            un 3x3, armar un 4x4 va a ser más difícil que un 3x3, pero no se
+            va a sentir tanta la diferencia si primero se comienza por un
+            4x4. Esto se debe a que la estrategia del 4x4 es llevarlo a un
+            3x3, con lo que la dificultad adicional está en lo que falta.
+
+            Incluso esto mismo pasa sabiendo armar el 3x3 y queriendo
+            aprender a armar el Megaminx, el Pyraminx o cubos que se
+            deformen como el Axis o el Mirror. En el caso del Megaminx,
+            aunque tenga otra forma, si una persona ya razonó cómo funciona
+            y arma el 3x3, ya intuye cómo se arma el Megaminx; solo se le
+            dificulta la última capa, donde los algoritmos cambian
+            ligeramente. Cubos como el Axis o el Mirror se pueden
+            interpretar como un 3x3, lo que simplifica sus algoritmos.
+            Esto también pasa al intentar armar cuboides: si ya sabes
+            armar el Square One, te serán más fáciles cubos como el
+            Star Barrel.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="CUBOS">
+    <div class="MargenTitle2">
+      <h2 class="SubTitle2">Tabla de dificultad</h2>
+    </div>
+
+    <div class="filtros">
+      <label>
+        Buscar cubo:
+        <input
+          type="text"
+          id="buscador"
+          placeholder="3x3, 4x4, mirror..."
+          disabled
+        >
+      </label>
+
+      <label>
+        Ordenar:
+        <select id="Tipo" disabled>
+          <option value="DifTot">Dificultad total</option>
+          <option value="DifAlg">Dificultad algorítmica</option>
+          <option value="DifBlock">Nivel de bloqueo</option>
+          <option value="DifDeform">Nivel de deformación</option>
+          <option value="DifParid">Cantidad de paridades</option>
+          <option value="CantPiezas">Cantidad de piezas</option>
+          <option value="CantGiros">Cantidad de giros</option>
+          <option value="CantAlg">Cantidad de algoritmos</option>
+          <option value="Nombre">Nombre</option>
+        </select>
+      </label>
+
+      <button id="btnOrden" type="button" disabled>
+        Descendente-⬇
+      </button>
+
+      <p id="estadoCarga" class="estado-carga" aria-live="polite">
+        Cargando cubos: 0/0
+      </p>
+    </div>
+
+    <div id="contenedorTabla">
+      <table id="tablaCubos">
+        <thead>
           <tr>
             <th>Nombre</th>
-            <th>cantidad de piezas</th>
-            <th>tipos de piezas</th>
-            <th>cantidad de giros</th>
-            <th>tipos de giros</th>
-            <th>pasos minimos</th>
-            <th>cantidad de algoritmos</th>
-            <th>dificultad promedio algoritmica</th>
-            <th>dificultad algoritmica total</th>
-            <th>dificultad por bloqueo</th>
-            <th>dificultad por deformacion</th>
-            <th>dificultad por paridad</th>
-            <th>dificultad total del cubo</th>
+            <th>Cantidad de piezas</th>
+            <th>Tipos de piezas</th>
+            <th>Cantidad de giros</th>
+            <th>Tipos de giros</th>
+            <th>Pasos mínimos</th>
+            <th>Cantidad de algoritmos</th>
+            <th>Dificultad promedio algorítmica</th>
+            <th>Dificultad algorítmica total</th>
+            <th>Nivel de bloqueo</th>
+            <th>Nivel de deformación</th>
+            <th>Cantidad de paridades</th>
+            <th>Dificultad total del cubo</th>
             <th>Ver cubo</th>
           </tr>
-        </table>
-      </div>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
     </div>
-    <div class='FondoInfo'>
-      <div id="detalleCubo" hidden>
-        <div id="detalleHeader"></div>
-        <div id="detalleContenido"></div>
-        <div id="detalleFooter"></div>
-      </div>
-    </div>
-    <div class='FondoInfo'>
-      <p>
-        La razon de porque utilize las formulas para medir dificultad son:
-      </p>
-      <ul>
-          <li>
-              Para el calculo de la dificultad de un algoritmo: la suma de los tipos de movimientos a agregan dificultad
-              , y la fracción, es porque, que un algoritmo sea largo no nescesariamente lo hace mas dificil, sino el echo 
-              de que no "siga algun patron simple", y eso es mas facil de medir al comparar los movimientos de la capa (o tipo de giro)
-              que mas se mueve, contra la que menos, ya que si esta diferencia es grande, es porque pueden ser movimientos que 
-              no sean "repetidos" (como lo puede ser "(R' D' R D)x5").
-          </li>
-          <li>
-              Para el calculo de la dificultad Algoritmica total: Justamente, y como esta aclarado, es mas 
-              diicil saberse un nuevo algoritmo de una misma dificultad, que el espejo de este, ya que una 
-              vez se haya interiorizado un algoritmo, con un poco de practica aprenderse el espejo de este 
-              es mas intuitivo.
-          </li>
-          <li>
-              Para el calculo de la dificultad por bloqueo: El crecimiento de esto es muy exponencial, por 
-              eso una formula con "e" elevado a algo. Lo de los niveles es para tener una forma de clasificar
-              , el "2" es para que escale mejor respecto al resto del metodo, y el "- 1" es para que cuando 
-              sea n=0, la ecuacion de 0 en vez de 1. Y puede afectar de manera directa a los algoritmos (tener que cambiarlos 
-            en la marcha), o de manera indirecta (crear nuevos).
-          </li>
-          <li>
-              Para el calculo de la dificultad por deformacion: Exactamente el mismo razonamiento que el 
-              anterior, solo que esta vez, se relacionana con la cantidad de piezas, porque son estas mismas las
-              que se confunden, como en el sudoku, al ser 26 piezas, siendo 20 las que se mueven, son muchas 
-              prueba y error.
-          </li>
-          <li>
-              Para el calculo de la dificultad por paridad: Hice esa suma ya que, si un algoritmo es usado para
-              resolver una paridad, se debe saber como aplicarlo y que hace, lo que aporta dificultad, ademas de 
-              que tambien aporta dificultad el hecho de haber una paridad, por mas simple que sea.
-          </li>
-          <li>
-              Para el calculo de la dificultad Total: simplemente la suma de todas las anteriores (menos la de
-              dificultad de un algoritmo).
-           </li>
-      </ul>
-      <p>
-          Aparte de esta aclaración, me adjunto el mérito de crear este método de medición, al que denomnio 
-          "Método Gand".
-      </p> 
-      <span>grupo de Discord de la pagina: </span>
-      <a href="https://discord.gg/jPffqn5puR">https://discord.gg/jPffqn5puR</a>
-    </div> 
-    <script src="./app.js" defer></script>
-    
-  </body>    
-</html>
+  </div>
 
+  <div class="FondoInfo">
+    <div id="detalleCubo" hidden>
+      <div id="detalleHeader"></div>
+      <div id="detalleContenido"></div>
+      <div id="detalleFooter"></div>
+    </div>
+  </div>
+
+  <div class="FondoInfo">
+    <h2>¿Por qué se utilizan estas fórmulas?</h2>
+
+    <ul>
+      <li>
+        Para el cálculo de la dificultad de un algoritmo: la cantidad de
+        tipos de movimientos distintos aporta dificultad. La fracción se
+        utiliza porque un algoritmo largo no necesariamente es más difícil:
+        también importa que no siga un patrón simple. Esto se mide comparando
+        la cantidad de veces que aparece el movimiento más usado contra la
+        cantidad de veces que aparece el menos usado. Si la diferencia es
+        grande, puede tratarse de movimientos menos repetitivos, a diferencia
+        de patrones como \((R'D'RD)\times5\).
+      </li>
+      <li>
+        Para el cálculo de la dificultad algorítmica total: como está
+        aclarado, es más difícil aprender un algoritmo nuevo que aprender
+        su espejo una vez que el original ya se interiorizó. Por eso los
+        espejos tienen un peso menor.
+      </li>
+      <li>
+        Para el nivel de bloqueo: el crecimiento de su efecto se modela
+        mediante una función exponencial. Los niveles permiten clasificar
+        cuánto afecta el bloqueo. Este factor puede afectar de manera directa
+        a los algoritmos (tener que cambiarlos durante la resolución) o de
+        manera indirecta (crear nuevos).
+      </li>
+      <li>
+        Para el nivel de deformación: se utiliza un razonamiento similar
+        al del bloqueo. Se relaciona con la cantidad de piezas porque son
+        estas las que pueden confundirse, lo que puede generar pruebas y
+        errores durante la resolución.
+      </li>
+      <li>
+        Para la cantidad de paridades: cada paridad aporta al resultado
+        porque hay que reconocer que existe y saber cómo resolverla.
+        La contribución algorítmica se representa mediante la dificultad
+        promedio de los algoritmos.
+      </li>
+      <li>
+        Para la dificultad total: se combinan la dificultad algorítmica
+        total, los factores de bloqueo y deformación, y el aporte separado
+        de las paridades, tal como establece la fórmula de la Versión V2.
+      </li>
+    </ul>
+
+    <p>
+      Aparte de esta aclaración, me atribuyo el mérito de crear este método
+      de medición, al que denomino «Método Gand».
+    </p>
+
+    <span>Grupo de Discord de la página: </span>
+    <a href="https://discord.gg/jPffqn5puR">
+      https://discord.gg/jPffqn5puR
+    </a>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
 
 
 
