@@ -198,8 +198,14 @@ rgb(121,84,40) ridge
 .ExplicacionFormulas{
   display: inline-block;
   font-size: 13px;
+  white-space: nowrap;
   color: blue;
 }
-
-
-
+.versionMetodo {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(90, 45, 20);
+  margin-top: -15px;
+  margin-bottom: 30px;
+}
